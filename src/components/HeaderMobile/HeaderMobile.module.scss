@@ -1,0 +1,36 @@
+
+.headerContent{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 28px;
+}
+
+.mobileMenu{
+  position: relative;
+}
+
+.burgerIcon{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  fill: var(--icons-color);
+  cursor: pointer;
+}
+.headerNav{
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  width: 163px;
+  border: 2.54688px solid var(--icons-color);
+  border-radius: 15px;
+  padding-top: 55px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.navItem{
+  font-weight: 400;
+  font-size: 20.375px;
+  line-height: 1.15;
+  color: var(--icons-color);
+}
