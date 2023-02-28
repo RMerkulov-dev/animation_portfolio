@@ -1,6 +1,7 @@
 import s from "./HomePage.module.scss";
 import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 import Container from "../../components/Container/Container";
+import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
         <Container>
           <div className={s.portfolioContent}>
             <h2>Portfolio</h2>
+            <SliderMobile />
           </div>
         </Container>
       </section>
