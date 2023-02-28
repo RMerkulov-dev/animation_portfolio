@@ -12,13 +12,13 @@ const cards = [
   {
     id: 2,
     title: "Card 2",
-    image: "https://via.placeholder.com/300",
+    image: `${Studio}`,
     description: "Description of Card 2",
   },
   {
     id: 3,
     title: "Card 3",
-    image: "https://via.placeholder.com/300",
+    image: `${Studio}`,
     description: "Description of Card 3",
   },
 ];
@@ -28,8 +28,10 @@ const CardItem = () => {
     <>
       {cards.map((card) => (
         <div key={card.id} className={s.sliderCard}>
-          <img src={card.image} alt="card" />
-          <div className={s.cardContentDown}></div>
+          <img src={card.image} alt="card" className={s.sliderImage} />
+          <div className={s.cardContentDown}>
+            <p>{card.description}</p>
+          </div>
         </div>
       ))}
     </>

@@ -1,4 +1,4 @@
-import s from "./Slider.mobile.scss";
+import s from "./SliderMobile.module.scss";
 import CardItem from "./CardItem/CardItem";
 
 const SliderMobile = () => {
