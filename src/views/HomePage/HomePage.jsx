@@ -8,9 +8,11 @@ const HomePage = () => {
     <div className={s.homePageContent}>
       <HeaderMobile />
       <section className={s.heroSection}>
-        <div className={s.heroContent}>
-          <div className={s.timeContent}>SERGEI BELIK</div>
-        </div>
+        <Container>
+          <div className={s.heroContent}>
+            <div className={s.timeContent}>SERGEI BELIK</div>
+          </div>
+        </Container>
       </section>
       <section className={s.portfolioSection}>
         <Container>
