@@ -108,7 +108,7 @@ const SliderMobile = () => {
         <SwiperSlide>
           <img src={Map} alt="" />
           <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
-            <p>Map USA</p>
+            <p className={s.sliderText}>Map USA</p>
           </div>
         </SwiperSlide>
       </Swiper>
