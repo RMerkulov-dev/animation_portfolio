@@ -12,12 +12,7 @@ const HeaderMobile = () => {
       <Container>
         <div className={s.headerContent}>
           <div className={s.mobileMenu}>
-            {isShowMenu ? (
-              <MdClose
-                className={s.burgerIcon}
-                onClick={() => setIsShowMenu(!isShowMenu)}
-              />
-            ) : (
+            {!isShowMenu && (
               <GiHamburgerMenu
                 className={s.burgerIcon}
                 onClick={() => setIsShowMenu(!isShowMenu)}
@@ -26,6 +21,10 @@ const HeaderMobile = () => {
 
             {isShowMenu && (
               <nav className={s.headerNav}>
+                <MdClose
+                  className={s.burgerIcon}
+                  onClick={() => setIsShowMenu(!isShowMenu)}
+                />
                 <p className={s.navItem}>Home</p>
                 <p className={s.navItem}>Portfolio</p>
                 <p className={s.navItem}>Store</p>
