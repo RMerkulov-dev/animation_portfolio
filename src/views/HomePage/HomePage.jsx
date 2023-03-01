@@ -3,6 +3,7 @@ import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
+import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 const HomePage = () => {
   return (
     <div className={s.homePageContent}>
@@ -22,7 +23,7 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section className={s.aboutSection}>
+      <section className={s.section}>
         <Container>
           <div className={s.aboutContent}>
             <h2 className={s.sectionTitle}>About This Gig</h2>
@@ -59,14 +60,29 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section className={s.storeSection}>
+      <section className={s.section}>
         <Container>
           <div>
-            <h2>Store</h2>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <h2 className={s.sectionTitle}>Store</h2>
+            <div className={s.storeWrapper}>
+              <div className={s.vectorItem}>
+                <div className={s.vectorLeft}>Vector clipart</div>
+                <div className={s.vectorRight}>
+                  <PlayIcon />
+                </div>
+              </div>
+              <div className={s.soundsItem}>
+                <div className={s.soundsLeft}>Sounds</div>
+                <div className={s.soundsRight}>
+                  <PlayIcon />
+                </div>
+              </div>
+              <div className={s.trackItem}>
+                <div className={s.trackLeft}>Soundtrack</div>
+                <div className={s.trackRight}>
+                  <PlayIcon />
+                </div>
+              </div>
             </div>
           </div>
         </Container>

@@ -30,6 +30,7 @@ const SliderMobile = () => {
         grabCursor={true}
         modules={[EffectCards]}
         className={s.mySwiper}
+        style={{ margin: 0 }}
       >
         <SwiperSlide>
           <img src={Studio} alt="" />
