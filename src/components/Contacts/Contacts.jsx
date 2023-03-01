@@ -21,7 +21,7 @@ const Contacts = () => {
           <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
             <Linkedin />
           </a>
-          <a href="https://t.me/yourusername">
+          <a href="https://t.me/Suzui_B" target="_blank" rel="noreferrer">
             <Telegramm />
           </a>
         </div>
