@@ -99,18 +99,18 @@ const HomePage = () => {
       <footer>
         <p>&copy; 2023 All rights reserved</p>
       </footer>
-      {/*<div className={s.dec_1}></div>*/}
-      {/*<div className={s.dec_2}></div>*/}
-      {/*<div className={s.dec_3}></div>*/}
-      {/*<div className={s.dec_4}></div>*/}
-      {/*<div className={s.dec_5}></div>*/}
-      {/*<div className={s.dec_6}></div>*/}
-      {/*<div className={s.dec_7}></div>*/}
-      {/*<div className={s.dec_8}></div>*/}
-      {/*<div className={s.dec_9}></div>*/}
-      {/*<div className={s.dec_10}></div>*/}
-      {/*<div className={s.dec_11}></div>*/}
-      {/*<div className={s.dec_12}></div>*/}
+      <div className={s.dec_1}></div>
+      <div className={s.dec_2}></div>
+      <div className={s.dec_3}></div>
+      <div className={s.dec_4}></div>
+      <div className={s.dec_5}></div>
+      <div className={s.dec_6}></div>
+      <div className={s.dec_7}></div>
+      <div className={s.dec_8}></div>
+      <div className={s.dec_9}></div>
+      <div className={s.dec_10}></div>
+      <div className={s.dec_11}></div>
+      <div className={s.dec_12}></div>
     </div>
   );
 };
