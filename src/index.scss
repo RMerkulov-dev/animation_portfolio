@@ -29,9 +29,15 @@ img {
   height: auto;
 }
 
+@font-face {
+  font-family: 'Vetrino';
+  src: url('./assets/fonts/Vetrino.otf') format('truetype');
+}
+
 :root{
   --icons-color:#ABABD1;
   --main-text-color:#000000;
+  --background-color:#FFFFFF;
 }
 
 body {

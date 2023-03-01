@@ -23,3 +23,30 @@
 .portfolioSection{
   padding-top: 500px;
 }
+.sectionTitle{
+  font-family: 'Vetrino', Ubuntu, serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--main-text-color);
+}
+.aboutSection{
+  padding-top: 100px;
+}
+.aboutDescText{
+  margin-top: 60px;
+  width: 310px;
+  padding: 53px 27px;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--background-color);
+  box-shadow: -5px 0px 30px rgba(12, 90, 107, 0.05), 10px 5px 30px 1px rgba(12, 90, 107, 0.05);
+}
+.aboutDescText>li{
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.5;
+  color: var(--main-text-color);
+}
