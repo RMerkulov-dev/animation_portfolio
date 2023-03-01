@@ -4,6 +4,7 @@ import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
+import Contacts from "../../components/Contacts/Contacts";
 const HomePage = () => {
   return (
     <div className={s.homePageContent}>
@@ -87,6 +88,17 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
+      <section className={s.section}>
+        <Container>
+          <div className={s.contactsContent}>
+            <h2 className={s.sectionTitle}>Contacts</h2>
+            <Contacts />
+          </div>
+        </Container>
+      </section>
+      <footer>
+        <p>&copy; 2023 All rights reserved</p>
+      </footer>
     </div>
   );
 };

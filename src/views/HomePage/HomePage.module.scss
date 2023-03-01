@@ -84,7 +84,7 @@ flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
   background: #ABABD1;
-  width: 90px;
+  width: 100px;
   padding: 15px ;
   border-radius: 0 40px 40px 0 ;
 
@@ -122,7 +122,7 @@ content:'';
   align-items: flex-end;
   justify-content: flex-end;
   background: #E8DCCC;
-  width: 90px;
+  width: 100px;
   padding: 15px ;
   border-radius: 0 40px 40px 0 ;
 }
@@ -158,7 +158,7 @@ content:'';
   align-items: flex-end;
   justify-content: flex-end;
   background: #E1A9C4;
-  width: 90px;
+  width: 100px;
   padding: 15px ;
   border-radius: 0 40px 40px 0 ;
 }
@@ -173,3 +173,14 @@ content:'';
   transform: skew(-20deg);
 }
 
+footer{
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14.9701px;
+  line-height: 1.2;
+  text-align: center;
+  color: rgba(171, 171, 209, 0.46);
+ }
