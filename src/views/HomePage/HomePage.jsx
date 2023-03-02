@@ -2,17 +2,28 @@ import s from "./HomePage.module.scss";
 import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
+// import { MdClose } from "react-icons/md";
+// import Hero from "../../assets/hero/hero_mob.mp4";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import Contacts from "../../components/Contacts/Contacts";
+import ModalVideo from "../../components/ModalVideo/ModalVideo";
+import { useState } from "react";
+
 const HomePage = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className={s.homePageContent}>
+      {openModal && (
+        <ModalVideo openModal={openModal} setOpenModal={setOpenModal} />
+      )}
       <HeaderMobile />
       <section className={s.heroSection}>
         <Container>
           <div className={s.heroContent}>
-            <div className={s.timeContent}>SERGEI BELIK</div>
+            {/*<div className={s.timeContent}>SERGEI BELIK</div>*/}
+            {/*<video src={Hero} autoPlay="on" width="100%" height="200px"></video>*/}
           </div>
         </Container>
       </section>
@@ -20,7 +31,7 @@ const HomePage = () => {
         <Container>
           <div className={s.portfolioContent}>
             <h2 className={s.sectionTitle}>Portfolio</h2>
-            <SliderMobile />
+            <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
           </div>
         </Container>
       </section>
@@ -99,18 +110,6 @@ const HomePage = () => {
       <footer>
         <p>&copy; 2023 All rights reserved</p>
       </footer>
-      {/*<div className={s.dec_1}></div>*/}
-      {/*<div className={s.dec_2}></div>*/}
-      {/*<div className={s.dec_3}></div>*/}
-      {/*<div className={s.dec_4}></div>*/}
-      {/*<div className={s.dec_5}></div>*/}
-      {/*<div className={s.dec_6}></div>*/}
-      {/*<div className={s.dec_7}></div>*/}
-      {/*<div className={s.dec_8}></div>*/}
-      {/*<div className={s.dec_9}></div>*/}
-      {/*<div className={s.dec_10}></div>*/}
-      {/*<div className={s.dec_11}></div>*/}
-      {/*<div className={s.dec_12}></div>*/}
     </div>
   );
 };
