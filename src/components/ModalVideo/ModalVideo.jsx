@@ -1,24 +1,22 @@
 import s from "./ModalVideo.module.scss";
 import { MdClose } from "react-icons/md";
-import StudioVideo from "../../assets/video/studio.mp4";
+import usePortal from "../../hooks/usePortal";
+import { useEffect } from "react";
 
-const ModalVideo = ({ openModal, setOpenModal }) => {
+const ModalVideo = ({ children, onClose }) => {
+  const portalNode = usePortal();
+
   return (
-    <div className={s.backdrop}>
-      <MdClose
-        className={s.closeIcon}
-        onClick={() => setOpenModal(!openModal)}
-      />
-      <div className={s.modalWrapper}>
-        <video
-          controls
-          autoPlay
-          className={s.modalVideo}
-          src={StudioVideo}
-          type="video/mp4"
-        ></video>
-      </div>
-    </div>
+    <>
+      {portalNode && (
+        <div className={s.backdrop} onClick={onClose}>
+          <MdClose className={s.closeIcon} onClick={onClose} />
+          <div className={s.modalWrapper} onClick={(e) => e.stopPropagation()}>
+            {children}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

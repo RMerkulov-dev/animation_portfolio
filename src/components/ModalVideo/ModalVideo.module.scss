@@ -1,16 +1,19 @@
 .backdrop{
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.78);
-  z-index: 100;
+  z-index: 600;
 }
 .modalWrapper{
-  width: 310px;
-  height: 250px;
+  min-width: 310px;
+  min-height: 250px;
 
 }
 .modalVideo{

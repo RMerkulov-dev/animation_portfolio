@@ -15,7 +15,7 @@ import Map from "../../assets/portfolio/map.jpg";
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 
 // import StudioVideo from "../../assets/video/studio.mp4";
-// import MatrixVideo from "../../assets/video/matrix.mp4";
+import MatrixVideo from "../../assets/video/matrix.mp4";
 // import TranceVideo from "../../assets/video/trance.mp4";
 // import MusicVideo from "../../assets/video/muzic.mp4";
 // import BusinessVideo from "../../assets/video/burger.mp4";
@@ -27,6 +27,7 @@ import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 // import BurgerVideo from "../../assets/video/burger.mp4";
 // import SportVideo from "../../assets/video/sport.mp4";
 // import MapVideo from "../../assets/video/map.mp4";
+import StudioVideo from "../../assets/video/studio.mp4";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -36,13 +37,36 @@ import "swiper/css/effect-cards";
 
 // import required modules
 import { EffectCards } from "swiper";
+import { useEffect, useState } from "react";
+import ModalVideo from "../ModalVideo/ModalVideo";
 // import { useState } from "react";
 // import ModalVideo from "../ModalVideo/ModalVideo";
 
-const SliderMobile = ({ openModal, setOpenModal }) => {
+const SliderMobile = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div className={s.sectionSliderMob}>
+        {isOpen && (
+          <ModalVideo onClose={handleClose}>
+            <video
+              controls
+              autoPlay
+              className={s.modalVideo}
+              src={StudioVideo}
+              type="video/mp4"
+            ></video>
+          </ModalVideo>
+        )}
         <Swiper
           effect={"cards"}
           grabCursor={true}
@@ -52,10 +76,7 @@ const SliderMobile = ({ openModal, setOpenModal }) => {
         >
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              <PlayIcon
-                className={s.iconPlay}
-                onClick={() => setOpenModal(!openModal)}
-              />
+              <PlayIcon className={s.iconPlay} onClick={handleOpen} />
               <img src={Studio} alt="" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8B099" }}>

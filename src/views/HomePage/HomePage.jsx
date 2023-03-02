@@ -9,6 +9,7 @@ import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useState } from "react";
+import StudioVideo from "../../assets/video/studio.mp4";
 
 const HomePage = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -115,3 +116,11 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// <video
+//     controls
+//     autoPlay
+//     className={s.modalVideo}
+//     src={StudioVideo}
+//     type="video/mp4"
+// ></video>
