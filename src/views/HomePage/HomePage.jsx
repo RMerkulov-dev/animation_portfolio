@@ -2,7 +2,8 @@ import s from "./HomePage.module.scss";
 import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
-import { MdClose } from "react-icons/md";
+// import { MdClose } from "react-icons/md";
+// import Hero from "../../assets/hero/hero_mob.mp4";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import Contacts from "../../components/Contacts/Contacts";
@@ -21,7 +22,8 @@ const HomePage = () => {
       <section className={s.heroSection}>
         <Container>
           <div className={s.heroContent}>
-            <div className={s.timeContent}>SERGEI BELIK</div>
+            {/*<div className={s.timeContent}>SERGEI BELIK</div>*/}
+            {/*<video src={Hero} autoPlay="on" width="100%" height="200px"></video>*/}
           </div>
         </Container>
       </section>

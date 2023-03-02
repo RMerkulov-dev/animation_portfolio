@@ -14,7 +14,7 @@ import Fr from "../../assets/portfolio/fr.jpg";
 import Map from "../../assets/portfolio/map.jpg";
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 
-import StudioVideo from "../../assets/video/studio.mp4";
+// import StudioVideo from "../../assets/video/studio.mp4";
 // import MatrixVideo from "../../assets/video/matrix.mp4";
 // import TranceVideo from "../../assets/video/trance.mp4";
 // import MusicVideo from "../../assets/video/muzic.mp4";
@@ -36,8 +36,8 @@ import "swiper/css/effect-cards";
 
 // import required modules
 import { EffectCards } from "swiper";
-import { useState } from "react";
-import ModalVideo from "../ModalVideo/ModalVideo";
+// import { useState } from "react";
+// import ModalVideo from "../ModalVideo/ModalVideo";
 
 const SliderMobile = ({ openModal, setOpenModal }) => {
   return (
