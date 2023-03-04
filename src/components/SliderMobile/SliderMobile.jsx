@@ -1,4 +1,11 @@
 import s from "./SliderMobile.module.scss";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper";
+import { useState } from "react";
+import ModalVideo from "../ModalVideo/ModalVideo";
+
 import Studio from "../../assets/portfolio/studio.jpg";
 import Matrix from "../../assets/portfolio/matrix.jpg";
 import Trance from "../../assets/portfolio/trance.jpg";
@@ -13,49 +20,7 @@ import Burger from "../../assets/portfolio/burger.jpg";
 import Fr from "../../assets/portfolio/fr.jpg";
 import Map from "../../assets/portfolio/map.jpg";
 import { GoPlay } from "react-icons/go";
-
-import StudioVideo from "../../assets/video/studio.mp4";
-import MatrixVideo from "../../assets/video/matrix.mp4";
-import TranceVideo from "../../assets/video/trance.mp4";
-import MusicVideo from "../../assets/video/muzic.mp4";
-import BusinessVideo from "../../assets/video/buziness.mp4";
-import ArcherVideo from "../../assets/video/archer.mp4";
-import CoolinartVideo from "../../assets/video/coolinart.mp4";
-import EnergyVideo from "../../assets/video/energy.mp4";
-import CosmeticsVideo from "../../assets/video/cosmetics.mp4";
-import IndustryVideo from "../../assets/video/industry.mp4";
-import BurgerVideo from "../../assets/video/burger.mp4";
-import SportVideo from "../../assets/video/sport.mp4";
-import MapVideo from "../../assets/video/map.mp4";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-
-// import required modules
-import { EffectCards } from "swiper";
-import { useEffect, useState } from "react";
-import ModalVideo from "../ModalVideo/ModalVideo";
-// import { useState } from "react";
-// import ModalVideo from "../ModalVideo/ModalVideo";
-
-const videos = [
-  StudioVideo,
-  MatrixVideo,
-  TranceVideo,
-  MusicVideo,
-  BusinessVideo,
-  ArcherVideo,
-  CoolinartVideo,
-  EnergyVideo,
-  CosmeticsVideo,
-  IndustryVideo,
-  BurgerVideo,
-  SportVideo,
-  MapVideo,
-];
+import { VIDEOS } from "../../helpers/VIDEO";
 
 const SliderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +35,7 @@ const SliderMobile = () => {
     if (currentVideoIndex === -1) {
       return null;
     }
-    const videoUrl = videos[currentVideoIndex];
+    const videoUrl = VIDEOS[currentVideoIndex];
     return (
       <video
         controls
@@ -105,7 +70,7 @@ const SliderMobile = () => {
         >
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E8B099" }}
@@ -121,7 +86,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E1A9C4" }}
@@ -137,7 +102,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E8DCCC" }}
@@ -153,7 +118,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#FFFFFF" }}
@@ -169,7 +134,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#ABABD1" }}
@@ -185,7 +150,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E1A9C4" }}
@@ -201,7 +166,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E8DCCC" }}
@@ -217,7 +182,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E8B099" }}
@@ -233,7 +198,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   style={{ fill: "#E1A9C4" }}
                   className={s.iconPlay}
@@ -249,7 +214,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E8DCCC" }}
@@ -265,7 +230,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#FFFFFF" }}
@@ -281,7 +246,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#ABABD1" }}
@@ -297,7 +262,7 @@ const SliderMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className={s.cardImageWrapper}>
-              {videos.map((videoUrl, index) => (
+              {VIDEOS.map((videoUrl, index) => (
                 <GoPlay
                   className={s.iconPlay}
                   style={{ fill: "#E8DCCC" }}
