@@ -2,14 +2,11 @@ import s from "./HomePage.module.scss";
 import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
-// import { MdClose } from "react-icons/md";
-// import Hero from "../../assets/hero/hero_mob.mp4";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useState } from "react";
-import StudioVideo from "../../assets/video/studio.mp4";
 
 const HomePage = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -116,11 +113,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-// <video
-//     controls
-//     autoPlay
-//     className={s.modalVideo}
-//     src={StudioVideo}
-//     type="video/mp4"
-// ></video>
