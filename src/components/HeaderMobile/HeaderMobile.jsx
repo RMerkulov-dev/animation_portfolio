@@ -39,14 +39,14 @@ const HeaderMobile = () => {
                     onClick={(e) => handleLinkClick(e, "hero")}
                   >
                     Home
-                  </a>
+                  </a>{" "}
                   {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                   <a
                     className={s.navItem}
                     onClick={(e) => handleLinkClick(e, "portfolio")}
                   >
                     Portfolio
-                  </a>
+                  </a>{" "}
                   {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                   <a
                     className={s.navItem}
@@ -60,7 +60,8 @@ const HeaderMobile = () => {
                     onClick={(e) => handleLinkClick(e, "contacts")}
                   >
                     Contacts
-                  </a>
+                  </a>{" "}
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                 </nav>
               </div>
             )}
