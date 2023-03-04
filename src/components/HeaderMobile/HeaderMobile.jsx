@@ -8,28 +8,29 @@ const HeaderMobile = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
 
   return (
-    <header>
+    <header className={s.mobileHeader}>
       <Container>
         <div className={s.headerContent}>
+          {!isShowMenu && (
+            <GiHamburgerMenu
+              className={s.burgerIcon}
+              onClick={() => setIsShowMenu(!isShowMenu)}
+            />
+          )}
           <div className={s.mobileMenu}>
-            {!isShowMenu && (
-              <GiHamburgerMenu
-                className={s.burgerIcon}
-                onClick={() => setIsShowMenu(!isShowMenu)}
-              />
-            )}
-
             {isShowMenu && (
-              <nav className={s.headerNav}>
-                <MdClose
-                  className={s.burgerIcon}
-                  onClick={() => setIsShowMenu(!isShowMenu)}
-                />
-                <p className={s.navItem}>Home</p>
-                <p className={s.navItem}>Portfolio</p>
-                <p className={s.navItem}>Store</p>
-                <p className={s.navItem}>Contacts</p>
-              </nav>
+              <div className={s.backdrop}>
+                <nav className={s.headerNav}>
+                  <MdClose
+                    className={s.closeIcon}
+                    onClick={() => setIsShowMenu(!isShowMenu)}
+                  />
+                  <a className={s.navItem}>Home</a>
+                  <a className={s.navItem}>Portfolio</a>
+                  <a className={s.navItem}>Store</a>
+                  <a className={s.navItem}>Contacts</a>
+                </nav>
+              </div>
             )}
           </div>
         </div>

@@ -6,10 +6,10 @@ const Header = () => {
     <header className={s.header}>
       <Container>
         <nav className={s.headerNav}>
-          <p>Home</p>
-          <p>Portfolio</p>
-          <p>Contacts</p>
-          <p>Store</p>
+          <a>Home</a>
+          <a>Portfolio</a>
+          <a>Contacts</a>
+          <a>Store</a>
         </nav>
       </Container>
     </header>

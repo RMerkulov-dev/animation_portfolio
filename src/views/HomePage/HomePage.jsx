@@ -5,24 +5,38 @@ import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import HeroMobileNew from "../../assets/hero/hero_mob.mp4";
+import HeroDesktop from "../../assets/hero/hero_pc.mp4";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Header from "../../components/Header/Header";
 
 const HomePage = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 767);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={s.homePageContent}>
       {openModal && (
         <ModalVideo openModal={openModal} setOpenModal={setOpenModal} />
       )}
-      <HeaderMobile />
+      {isMobile ? <HeaderMobile /> : <Header />}
+
       <section className={s.heroSection}>
         {/*<Container>*/}
         <div className={s.heroContent}>
           <video
-            src={HeroMobileNew}
+            src={isMobile ? HeroMobileNew : HeroDesktop}
             autoPlay
             playsInline
             width="100%"
