@@ -3,33 +3,66 @@ import Container from "../Container/Container";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
+import { smoothScroll } from "../../hooks/useScroll";
 
 const HeaderMobile = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
 
+  function handleLinkClick(event, targetId) {
+    event.preventDefault();
+    const duration = 500;
+    smoothScroll(targetId, duration);
+    setIsShowMenu(false);
+  }
+
   return (
-    <header>
+    <header className={s.mobileHeader}>
       <Container>
         <div className={s.headerContent}>
+          {!isShowMenu && (
+            <GiHamburgerMenu
+              className={s.burgerIcon}
+              onClick={() => setIsShowMenu(!isShowMenu)}
+            />
+          )}
           <div className={s.mobileMenu}>
-            {!isShowMenu && (
-              <GiHamburgerMenu
-                className={s.burgerIcon}
-                onClick={() => setIsShowMenu(!isShowMenu)}
-              />
-            )}
-
             {isShowMenu && (
-              <nav className={s.headerNav}>
-                <MdClose
-                  className={s.burgerIcon}
-                  onClick={() => setIsShowMenu(!isShowMenu)}
-                />
-                <p className={s.navItem}>Home</p>
-                <p className={s.navItem}>Portfolio</p>
-                <p className={s.navItem}>Store</p>
-                <p className={s.navItem}>Contacts</p>
-              </nav>
+              <div className={s.backdrop}>
+                <nav className={s.headerNav}>
+                  <MdClose
+                    className={s.closeIcon}
+                    onClick={() => setIsShowMenu(!isShowMenu)}
+                  />
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "hero")}
+                  >
+                    Home
+                  </a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "portfolio")}
+                  >
+                    Portfolio
+                  </a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "store")}
+                  >
+                    Store
+                  </a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "contacts")}
+                  >
+                    Contacts
+                  </a>
+                </nav>
+              </div>
             )}
           </div>
         </div>

@@ -5,24 +5,38 @@ import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import HeroMobileNew from "../../assets/hero/hero_mob.mp4";
+import HeroDesktop from "../../assets/hero/hero_pc.mp4";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Header from "../../components/Header/Header";
 
 const HomePage = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 767);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={s.homePageContent}>
       {openModal && (
         <ModalVideo openModal={openModal} setOpenModal={setOpenModal} />
       )}
-      <HeaderMobile />
-      <section className={s.heroSection}>
+      {isMobile ? <HeaderMobile /> : <Header />}
+
+      <section id="hero" className={s.heroSection}>
         {/*<Container>*/}
         <div className={s.heroContent}>
           <video
-            src={HeroMobileNew}
+            src={isMobile ? HeroMobileNew : HeroDesktop}
             autoPlay
             playsInline
             width="100%"
@@ -35,15 +49,15 @@ const HomePage = () => {
         </div>
         {/*</Container>*/}
       </section>
-      <section className={s.portfolioSection}>
+      <section id="portfolio" className={s.portfolioSection}>
         <Container>
-          <div className={s.portfolioContent}>
+          <div id="portfolio" className={s.portfolioContent}>
             <h2 className={s.sectionTitle}>Portfolio</h2>
             <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
           </div>
         </Container>
       </section>
-      <section className={s.section}>
+      <section id="about" className={s.section}>
         <Container>
           <div className={s.aboutContent}>
             <h2 className={s.sectionTitle}>About This Gig</h2>
@@ -80,7 +94,7 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section className={s.section}>
+      <section id="store" className={s.section}>
         <Container>
           <div>
             <h2 className={s.sectionTitle}>Store</h2>
@@ -107,7 +121,7 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section>
+      <section id="contacts" className={s.section}>
         <Container>
           <div className={s.contactsContent}>
             <h2 className={s.sectionTitle}>Contacts</h2>

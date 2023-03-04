@@ -1,6 +1,8 @@
+.mobileHeader{
+  position: relative;
 
+}
 .headerContent{
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -13,15 +15,39 @@
 
 .burgerIcon{
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 35px;
+  right: 35px;
+  width: 30px;
+  height: 30px;
   fill: var(--icons-color);
   cursor: pointer;
 }
+.closeIcon{
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  fill: var(--icons-color);
+  cursor: pointer;
+}
+.backdrop{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 600;
+}
 .headerNav{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 25px;
+  right: 10px;
   display: flex;
   flex-direction: column;
   gap: 23px;
