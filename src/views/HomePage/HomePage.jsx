@@ -4,6 +4,7 @@ import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
+import HeroMobile from "../../assets/hero/hero_mob.mp4";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useState } from "react";
@@ -18,12 +19,16 @@ const HomePage = () => {
       )}
       <HeaderMobile />
       <section className={s.heroSection}>
-        <Container>
-          <div className={s.heroContent}>
-            {/*<div className={s.timeContent}>SERGEI BELIK</div>*/}
-            {/*<video src={Hero} autoPlay="on" width="100%" height="200px"></video>*/}
-          </div>
-        </Container>
+        {/*<Container>*/}
+        <div className={s.heroContent}>
+          <video
+            src={HeroMobile}
+            autoPlay="on"
+            width="100%"
+            // height="200px"
+          ></video>
+        </div>
+        {/*</Container>*/}
       </section>
       <section className={s.portfolioSection}>
         <Container>
