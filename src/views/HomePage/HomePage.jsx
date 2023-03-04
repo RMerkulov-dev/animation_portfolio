@@ -4,7 +4,7 @@ import Container from "../../components/Container/Container";
 import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
-import HeroMobileNew from "../../assets/hero/hero_mobile.webm";
+import HeroMobileNew from "../../assets/hero/hero_mob.mp4";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useState } from "react";
@@ -24,10 +24,12 @@ const HomePage = () => {
           <video
             src={HeroMobileNew}
             autoPlay
+            playsInline
             width="100%"
             type="video/mp4"
             muted
             loop="true"
+            preload="auto"
             // height="200px"
           ></video>
         </div>
