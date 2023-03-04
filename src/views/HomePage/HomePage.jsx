@@ -23,8 +23,11 @@ const HomePage = () => {
         <div className={s.heroContent}>
           <video
             src={HeroMobile}
-            autoPlay="on"
+            autoPlay
             width="100%"
+            type="video/mp4"
+            muted
+            loop="true"
             // height="200px"
           ></video>
         </div>
