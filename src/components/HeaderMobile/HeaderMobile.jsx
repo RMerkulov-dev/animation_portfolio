@@ -3,9 +3,17 @@ import Container from "../Container/Container";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
+import { smoothScroll } from "../../hooks/useScroll";
 
 const HeaderMobile = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
+
+  function handleLinkClick(event, targetId) {
+    event.preventDefault();
+    const duration = 500;
+    smoothScroll(targetId, duration);
+    setIsShowMenu(false);
+  }
 
   return (
     <header className={s.mobileHeader}>
@@ -25,10 +33,34 @@ const HeaderMobile = () => {
                     className={s.closeIcon}
                     onClick={() => setIsShowMenu(!isShowMenu)}
                   />
-                  <a className={s.navItem}>Home</a>
-                  <a className={s.navItem}>Portfolio</a>
-                  <a className={s.navItem}>Store</a>
-                  <a className={s.navItem}>Contacts</a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "hero")}
+                  >
+                    Home
+                  </a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "portfolio")}
+                  >
+                    Portfolio
+                  </a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "store")}
+                  >
+                    Store
+                  </a>
+                  {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                  <a
+                    className={s.navItem}
+                    onClick={(e) => handleLinkClick(e, "contacts")}
+                  >
+                    Contacts
+                  </a>
                 </nav>
               </div>
             )}

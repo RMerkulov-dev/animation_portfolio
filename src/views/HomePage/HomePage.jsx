@@ -32,7 +32,7 @@ const HomePage = () => {
       )}
       {isMobile ? <HeaderMobile /> : <Header />}
 
-      <section className={s.heroSection}>
+      <section id="hero" className={s.heroSection}>
         {/*<Container>*/}
         <div className={s.heroContent}>
           <video
@@ -49,15 +49,15 @@ const HomePage = () => {
         </div>
         {/*</Container>*/}
       </section>
-      <section className={s.portfolioSection}>
+      <section id="portfolio" className={s.portfolioSection}>
         <Container>
-          <div className={s.portfolioContent}>
+          <div id="portfolio" className={s.portfolioContent}>
             <h2 className={s.sectionTitle}>Portfolio</h2>
             <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
           </div>
         </Container>
       </section>
-      <section className={s.section}>
+      <section id="about" className={s.section}>
         <Container>
           <div className={s.aboutContent}>
             <h2 className={s.sectionTitle}>About This Gig</h2>
@@ -94,7 +94,7 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section className={s.section}>
+      <section id="store" className={s.section}>
         <Container>
           <div>
             <h2 className={s.sectionTitle}>Store</h2>
@@ -121,7 +121,7 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section>
+      <section id="contacts" className={s.section}>
         <Container>
           <div className={s.contactsContent}>
             <h2 className={s.sectionTitle}>Contacts</h2>
