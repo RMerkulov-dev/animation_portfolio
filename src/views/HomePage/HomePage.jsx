@@ -10,6 +10,7 @@ import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
+import PortfolioDescktop from "../../components/PortfolioDescktop/PortfolioDescktop";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
@@ -53,7 +54,11 @@ const HomePage = () => {
         <Container>
           <div id="portfolio" className={s.portfolioContent}>
             <h2 className={s.sectionTitle}>Portfolio</h2>
-            <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
+            {isMobile ? (
+              <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
+            ) : (
+              <PortfolioDescktop />
+            )}
           </div>
         </Container>
       </section>
