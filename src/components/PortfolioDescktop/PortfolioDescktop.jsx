@@ -1,5 +1,6 @@
 import s from "./PortfolioDesctop.module.scss";
 import { sliderTablet } from "../../helpers/cards";
+import { VIDEOS } from "../../helpers/VIDEO";
 
 const PortfolioDesctop = () => {
   return (
@@ -32,7 +33,21 @@ const PortfolioDesctop = () => {
           </li>
 
           <li className={s.item5}>
-            <img src={sliderTablet[4]} alt="card" />
+            {/*<img src={sliderTablet[4]} alt="card" />*/}
+            <div className={s.cardVideoBox}>
+              <video
+                className={s.cardVideo}
+                src={VIDEOS[3]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+
             <div className={s.cardDesc} style={{ background: "#FFFFFF" }}>
               <p className={s.cardText}>Music project</p>
             </div>
@@ -50,7 +65,20 @@ const PortfolioDesctop = () => {
             </div>
           </li>
           <li className={s.item8}>
-            <img src={sliderTablet[7]} alt="card" />
+            {/*<img src={sliderTablet[7]} alt="card" />*/}
+            <div className={s.cardVideoBox}>
+              <video
+                className={s.cardVideo}
+                src={VIDEOS[6]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
             <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
               <p className={s.cardText}>Best Coolinart</p>
             </div>
@@ -68,7 +96,20 @@ const PortfolioDesctop = () => {
             </div>
           </li>
           <li className={s.item11}>
-            <img src={sliderTablet[11]} alt="card" />
+            {/*<img src={sliderTablet[11]} alt="card" />*/}
+            <div className={s.cardVideoBox}>
+              <video
+                className={s.cardVideo}
+                src={VIDEOS[10]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
             <div className={s.cardDesc} style={{ background: "#FFFFFF" }}>
               <p className={s.cardText}>Burger Club</p>
             </div>
