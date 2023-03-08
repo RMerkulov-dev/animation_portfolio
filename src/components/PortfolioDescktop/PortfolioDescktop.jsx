@@ -19,31 +19,31 @@ const PortfolioDesctop = () => {
             <img src={sliderTablet[3]} alt="card" />
           </li>
 
-          <li className={s.item9}>
+          <li className={s.item5}>
             <img src={sliderTablet[4]} alt="card" />
           </li>
-          <li className={s.item10}>
+          <li className={s.item6}>
             <img src={sliderTablet[5]} alt="card" />
           </li>
-          <li className={s.item11}>
+          <li className={s.item7}>
             <img src={sliderTablet[6]} alt="card" />
           </li>
-          <li className={s.item12}>
+          <li className={s.item8}>
             <img src={sliderTablet[7]} alt="card" />
           </li>
-          <li className={s.item13}>
+          <li className={s.item9}>
             <img src={sliderTablet[8]} alt="card" />
           </li>
-          <li className={s.item14}>
+          <li className={s.item10}>
             <img src={sliderTablet[9]} alt="card" />
           </li>
-          <li className={s.item15}>
+          <li className={s.item11}>
             <img src={sliderTablet[11]} alt="card" />
           </li>
-          <li className={s.item16}>
+          <li className={s.item12}>
             <img src={sliderTablet[12]} alt="card" />
           </li>
-          <li className={s.item17}>
+          <li className={s.item13}>
             <img src={sliderTablet[13]} alt="card" />
           </li>
         </ul>
