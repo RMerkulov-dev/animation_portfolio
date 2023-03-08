@@ -5,6 +5,10 @@
   grid-column-gap: 21px;
   grid-row-gap: 42px;
 }
+.portfolioList>li{
+  border-radius: 20px;
+  box-shadow: -2.81113px 0px 16.8668px rgba(12, 90, 107, 0.05), 5.62225px 2.81113px 16.8668px 1.12445px rgba(12, 90, 107, 0.1);
+}
 
 .item1 { grid-area: 1 / 1 / 2 / 2;
   width: 310px;
@@ -48,7 +52,6 @@
   grid-area: 5 / 1 / 6 / 3;
   border-radius: 20px 20px 0 0;
   width: 100%;
-  height: 263px;
   overflow: hidden;
 }
 .item9 {
@@ -66,7 +69,6 @@
 .item11 {
   grid-area: 7 / 1 / 8 / 3;
   width: 100%;
-  height: 263px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
@@ -81,4 +83,17 @@
   width: 310px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
+}
+.cardDesc{
+  padding: 27px 32px;
+  border-radius: 0 0 20px 20px;
+  height: 100%;
+  width: 100%;
+}
+.cardText{
+  font-family: 'Vetrino';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--main-text-color);
 }

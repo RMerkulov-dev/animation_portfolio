@@ -8,43 +8,82 @@ const PortfolioDesctop = () => {
         <ul className={s.portfolioList}>
           <li className={s.item1}>
             <img src={sliderTablet[0]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E8B099" }}>
+              <p className={s.cardText}>Recording Studio Saxophon</p>
+            </div>
           </li>
           <li className={s.item2}>
             <img src={sliderTablet[1]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
+              <p className={s.cardText}>Matrix Company</p>
+            </div>
           </li>
           <li className={s.item3}>
             <img src={sliderTablet[2]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>Michael Kean</p>
+            </div>
           </li>
           <li className={s.item4}>
             <img src={sliderTablet[3]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
+              <p className={s.cardText}>Business</p>
+            </div>
           </li>
 
           <li className={s.item5}>
             <img src={sliderTablet[4]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#FFFFFF" }}>
+              <p className={s.cardText}>Music project</p>
+            </div>
           </li>
           <li className={s.item6}>
             <img src={sliderTablet[5]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
+              <p className={s.cardText}>Archer Health</p>
+            </div>
           </li>
           <li className={s.item7}>
             <img src={sliderTablet[6]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>Indastry Corporation</p>
+            </div>
           </li>
           <li className={s.item8}>
             <img src={sliderTablet[7]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>Best Coolinart</p>
+            </div>
           </li>
           <li className={s.item9}>
             <img src={sliderTablet[8]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E8B099" }}>
+              <p className={s.cardText}>Energy Green</p>
+            </div>
           </li>
           <li className={s.item10}>
             <img src={sliderTablet[9]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
+              <p className={s.cardText}>Zoskin Beauty</p>
+            </div>
           </li>
           <li className={s.item11}>
             <img src={sliderTablet[11]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#FFFFFF" }}>
+              <p className={s.cardText}>Burger Club</p>
+            </div>
           </li>
           <li className={s.item12}>
             <img src={sliderTablet[12]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
+              <p className={s.cardText}>FR Project</p>
+            </div>
           </li>
           <li className={s.item13}>
             <img src={sliderTablet[13]} alt="card" />
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>Map USA</p>
+            </div>
           </li>
         </ul>
       </div>
