@@ -8,6 +8,12 @@
 .portfolioList>li{
   border-radius: 20px;
   box-shadow: -2.81113px 0px 16.8668px rgba(12, 90, 107, 0.05), 5.62225px 2.81113px 16.8668px 1.12445px rgba(12, 90, 107, 0.1);
+  transition: 0.3s;
+  &:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transform: scale(1.03);
+    transition: 0.3s;
+  }
 }
 
 .item1 { grid-area: 1 / 1 / 2 / 2;
