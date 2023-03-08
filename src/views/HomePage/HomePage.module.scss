@@ -41,7 +41,7 @@
 .aboutDescText{
   margin-right: 0;
   margin-top: 60px;
-  width: 340px;
+  //width: 340px;
   padding: 53px 27px;
   border-radius: 40px;
   background: var(--background-color);
@@ -64,20 +64,25 @@ flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 310px;
   padding-left: 15px;
   box-shadow: -5px 0px 30px rgba(12, 90, 107, 0.05), 10px 5px 30px 1px rgba(12, 90, 107, 0.05);
   border-radius: 40px;
   background: white;
+  @media screen and (min-width: 768px) {
+    width: 710px;
+    padding-left: 32px;
+  }
 }
 .vectorLeft{
-  width: 200px;
+  width: 250px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-text-color);
-
-
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    font-size: 18px;
+  }
 }
 .vectorRight{
   position: relative;
@@ -88,7 +93,10 @@ flex-direction: column;
   width: 100px;
   padding: 15px ;
   border-radius: 0 40px 40px 0 ;
+  @media screen and (min-width: 768px) {
+    width: 200px;
 
+  }
 }
 .vectorRight:before{
 content:'';
@@ -99,23 +107,35 @@ content:'';
   height: 100%;
   background: #ABABD1;
   transform: skew(-20deg);
+  @media screen and (min-width: 768px) {
+    left: -15px;
+    width: 30px;
+  }
 }
 .soundsItem{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 310px;
   padding-left: 15px;
   box-shadow: -5px 0px 30px rgba(12, 90, 107, 0.05), 10px 5px 30px 1px rgba(12, 90, 107, 0.05);
   border-radius: 40px;
   background: white;
+  @media screen and (min-width: 768px) {
+    width: 710px;
+    padding-left: 32px;
+  }
+
 }
 .soundsLeft{
-  width: 200px;
+  width: 250px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-text-color);
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    font-size: 18px;
+  }
 }
 .soundsRight{
   position: relative;
@@ -126,6 +146,9 @@ content:'';
   width: 100px;
   padding: 15px ;
   border-radius: 0 40px 40px 0 ;
+  @media screen and (min-width: 768px) {
+    width: 200px;
+  }
 }
 .soundsRight:before{
   content:'';
@@ -136,23 +159,34 @@ content:'';
   height: 100%;
   background: #E8DCCC;
   transform: skew(-20deg);
+  @media screen and (min-width: 768px) {
+    left: -15px;
+    width: 30px;
+  }
 }
 .trackItem{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 310px;
   padding-left: 15px;
   box-shadow: -5px 0px 30px rgba(12, 90, 107, 0.05), 10px 5px 30px 1px rgba(12, 90, 107, 0.05);
   border-radius: 40px;
   background: white;
+  @media screen and (min-width: 768px) {
+    width: 710px;
+    padding-left: 32px;
+  }
 }
 .trackLeft{
-  width: 200px;
+  width: 250px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-text-color);
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    font-size: 18px;
+  }
 }
 .trackRight{
   position: relative;
@@ -163,6 +197,9 @@ content:'';
   width: 100px;
   padding: 15px ;
   border-radius: 0 40px 40px 0 ;
+  @media screen and (min-width: 768px) {
+    width: 200px;
+  }
 }
 .trackRight:before{
   content:'';
@@ -173,6 +210,20 @@ content:'';
   height: 100%;
   background: #E1A9C4;
   transform: skew(-20deg);
+  @media screen and (min-width: 768px) {
+    left: -15px;
+    width: 30px;
+  }
+}
+.storeIcon{
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+  @media screen and (min-width: 768px) {
+    width: 33px;
+    height: 33px;
+    margin-right: 30px;
+  }
 }
 
 footer{

@@ -107,19 +107,19 @@ const HomePage = () => {
               <div className={s.vectorItem}>
                 <div className={s.vectorLeft}>Vector clipart</div>
                 <div className={s.vectorRight}>
-                  <PlayIcon />
+                  <PlayIcon className={s.storeIcon} />
                 </div>
               </div>
               <div className={s.soundsItem}>
                 <div className={s.soundsLeft}>Sounds</div>
                 <div className={s.soundsRight}>
-                  <PlayIcon />
+                  <PlayIcon className={s.storeIcon} />
                 </div>
               </div>
               <div className={s.trackItem}>
                 <div className={s.trackLeft}>Soundtrack</div>
                 <div className={s.trackRight}>
-                  <PlayIcon />
+                  <PlayIcon className={s.storeIcon} />
                 </div>
               </div>
             </div>
