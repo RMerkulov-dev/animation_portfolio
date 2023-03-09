@@ -115,3 +115,20 @@ z-index: 20;
     transition: 0.25s;
   }
 }
+
+textarea{
+  resize: none;
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--accent-text-color);
+}
+::placeholder{
+ font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--accent-text-color);
+  opacity: 0.5;
+}
