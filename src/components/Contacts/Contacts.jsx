@@ -15,7 +15,7 @@ const Contacts = () => {
         </div>
         <div className={s.contactContainer}>
           <Tel />
-          <a href="tel:+380976998008">+380976998008</a>
+          <a href="tel:+380503934859">+380503934859</a>
         </div>
         <div className={s.links}>
           <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
