@@ -1,0 +1,246 @@
+.portfolioWrapper{
+  @media screen and (min-width: 1279px) {
+    margin-top: 50px;
+  }
+}
+
+.portfolioList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 21px;
+  grid-row-gap: 42px;
+  @media screen and (min-width: 1279px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 70px;
+  }
+}
+.portfolioList>li{
+  position: relative;
+  border-radius: 20px;
+  box-shadow: -2.81113px 0px 16.8668px rgba(12, 90, 107, 0.05), 5.62225px 2.81113px 16.8668px 1.12445px rgba(12, 90, 107, 0.1);
+  transition: 0.3s;
+  &:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transform: scale(1.03);
+    transition: 0.3s;
+  }
+}
+
+.item1 { grid-area: 1 / 1 / 2 / 2;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item2 { grid-area: 1 / 2 / 2 / 3;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item3 {
+  grid-area: 2 / 1 / 3 / 2;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 1 / 3 / 1 / 3;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item4 { grid-area: 2 / 2 / 3 / 3;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 2 / 1 / 2 / 1;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+
+.item5 {
+  grid-area: 3 / 1 / 4 / 3;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 3 / 2 / 3 / 1fr;
+
+  }
+}
+.item6 {
+  grid-area: 4 / 1 / 5 / 2;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 2 / 2 / 3 /3;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item7 {
+  grid-area: 4 / 2 / 5 / 3;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 4 / 2 /4 /3;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item8 {
+  grid-area: 5 / 1 / 6 / 3;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 4 / 3 / 4 /4;
+    width: 360px;
+    &>video{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.item9 {
+  grid-area: 6 / 1 / 7 / 2;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 3 / 3 / 3 / 3;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item10 {
+  grid-area: 6 / 2 / 7 / 3;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 2 / 3 / 3 /4;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item11 {
+  grid-area: 7 / 1 / 8 / 3;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 5 / 1 / 5 /3;
+  }
+}
+.item12 {
+  grid-area: 8 / 1 / 9 / 2;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 4 / 1 / 4 /4;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.item13 {
+  grid-area: 8 / 2 / 9 / 3;
+  width: 310px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  @media screen and (min-width: 1279px) {
+    grid-area: 5 / 3 / 5 /3;
+    width: 360px;
+    &>img{
+      width: 100%;
+    }
+  }
+}
+.cardDesc{
+  padding: 27px 32px;
+  border-radius: 0 0 20px 20px;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  @media screen and (min-width: 1279px) {
+
+  }
+}
+.cardText{
+  font-family: 'Vetrino';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--main-text-color);
+}
+.cardVideoBox{
+position: relative;
+  height: 310px;
+  overflow: hidden;
+
+}
+.cardVideo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  scale: 1.4;
+  z-index: -1;
+  @media screen and (min-width: 1279px) {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.1);
+  }
+}
+.modalVideo{
+  width: 100%;
+  //height: 100%;
+}
+.iconPlay{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 30;
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+
+

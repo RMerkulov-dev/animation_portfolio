@@ -19,10 +19,10 @@ const Contacts = () => {
         </div>
         <div className={s.links}>
           <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-            <Linkedin />
+            <Linkedin className={s.iconLink} />
           </a>
           <a href="https://t.me/Suzui_B" target="_blank" rel="noreferrer">
-            <Telegramm />
+            <Telegramm className={s.iconLink} />
           </a>
         </div>
       </div>

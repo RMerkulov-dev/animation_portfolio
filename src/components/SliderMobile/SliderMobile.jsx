@@ -6,21 +6,9 @@ import { EffectCards } from "swiper";
 import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 
-import Studio from "../../assets/portfolio/studio.jpg";
-import Matrix from "../../assets/portfolio/matrix.jpg";
-import Trance from "../../assets/portfolio/trance.jpg";
-import Sound from "../../assets/portfolio/sound.jpg";
-import Business from "../../assets/portfolio/business.jpg";
-import Archer from "../../assets/portfolio/archer.jpg";
-import Coolinart from "../../assets/portfolio/coolinart.jpg";
-import Energy from "../../assets/portfolio/energy.jpg";
-import Beauty from "../../assets/portfolio/beauty.jpg";
-import Indastry from "../../assets/portfolio/indastry.jpg";
-import Burger from "../../assets/portfolio/burger.jpg";
-import Fr from "../../assets/portfolio/fr.jpg";
-import Map from "../../assets/portfolio/map.jpg";
 import { GoPlay } from "react-icons/go";
 import { VIDEOS } from "../../helpers/VIDEO";
+import { slider } from "../../helpers/cards";
 
 const SliderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +66,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(0)}
                 />
               ))}
-              <img src={Studio} alt="card" />
+              <img src={slider[0]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8B099" }}>
               <p className={s.sliderText}>Recording Studio Saxophon</p>
@@ -94,7 +82,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(1)}
                 />
               ))}
-              <img src={Matrix} alt="" />
+              <img src={slider[1]} alt="" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
               <p className={s.sliderText}>Matrix Company</p>
@@ -110,7 +98,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(2)}
                 />
               ))}
-              <img src={Trance} alt="card" />
+              <img src={slider[2]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
               <p className={s.sliderText}>Michael Kean</p>
@@ -126,7 +114,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(3)}
                 />
               ))}
-              <img src={Sound} alt="card" />
+              <img src={slider[3]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#FFFFFF" }}>
               <p className={s.sliderText}>Music project</p>
@@ -142,7 +130,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(4)}
                 />
               ))}
-              <img src={Business} alt="card" />
+              <img src={slider[4]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
               <p className={s.sliderText}>Business</p>
@@ -158,7 +146,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(5)}
                 />
               ))}
-              <img src={Archer} alt="card" />
+              <img src={slider[5]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
               <p className={s.sliderText}>Archer Health</p>
@@ -174,7 +162,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(6)}
                 />
               ))}
-              <img src={Coolinart} alt="card" />
+              <img src={slider[6]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
               <p className={s.sliderText}>Best Coolinart</p>
@@ -190,7 +178,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(7)}
                 />
               ))}
-              <img src={Energy} alt="card" />
+              <img src={slider[7]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8B099" }}>
               <p className={s.sliderText}>Energy Green</p>
@@ -206,7 +194,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(8)}
                 />
               ))}
-              <img src={Beauty} alt="card" />
+              <img src={slider[8]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
               <p className={s.sliderText}>Zoskin Beauty</p>
@@ -222,7 +210,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(9)}
                 />
               ))}
-              <img src={Indastry} alt="card" />
+              <img src={slider[9]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
               <p className={s.sliderText}>Indastry Corporation</p>
@@ -238,7 +226,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(10)}
                 />
               ))}
-              <img src={Burger} alt="card" />
+              <img src={slider[10]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#FFFFFF" }}>
               <p className={s.sliderText}>Burger Club</p>
@@ -254,7 +242,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(11)}
                 />
               ))}
-              <img src={Fr} alt="card" />
+              <img src={slider[11]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
               <p className={s.sliderText}>FR Project</p>
@@ -270,7 +258,7 @@ const SliderMobile = () => {
                   onClick={() => handleVideoButtonClick(12)}
                 />
               ))}
-              <img src={Map} alt="card" />
+              <img src={slider[12]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
               <p className={s.sliderText}>Map USA</p>

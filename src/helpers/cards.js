@@ -1,0 +1,49 @@
+import Studio from "../assets/portfolio/studio.jpg";
+import Matrix from "../assets/portfolio/matrix.jpg";
+import Trance from "../assets/portfolio/trance.jpg";
+import Sound from "../assets/portfolio/sound.jpg";
+import SoundTablet from "../assets/portfolio/sound_tab.jpg";
+import Business from "../assets/portfolio/business.jpg";
+import Archer from "../assets/portfolio/archer.jpg";
+import Coolinart from "../assets/portfolio/coolinart.jpg";
+import CoolinartTab from "../assets/portfolio/coolinart_tab.jpg";
+import BoorgerTab from "../assets/portfolio/burger_tab.jpg";
+import Energy from "../assets/portfolio/energy.jpg";
+import Beauty from "../assets/portfolio/beauty.jpg";
+import Indastry from "../assets/portfolio/indastry.jpg";
+import Burger from "../assets/portfolio/burger.jpg";
+import Fr from "../assets/portfolio/fr.jpg";
+import Map from "../assets/portfolio/map.jpg";
+
+export const slider = [
+  Studio,
+  Matrix,
+  Trance,
+  Sound,
+  Business,
+  Archer,
+  Coolinart,
+  Energy,
+  Beauty,
+  Indastry,
+  Burger,
+  Fr,
+  Map,
+];
+
+export const sliderTablet = [
+  Studio,
+  Matrix,
+  Trance,
+  Business,
+  SoundTablet,
+  Archer,
+  Indastry,
+  CoolinartTab,
+  Energy,
+  Beauty,
+  Indastry,
+  BoorgerTab,
+  Fr,
+  Map,
+];
