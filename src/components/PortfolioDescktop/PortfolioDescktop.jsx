@@ -54,7 +54,20 @@ const PortfolioDesctop = () => {
                 onClick={() => handleVideoButtonClick(0)}
               />
             ))}
-            <img src={sliderTablet[0]} alt="card" />
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[0]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[0]} alt="card" />*/}
             <div className={s.cardDesc} style={{ background: "#E8B099" }}>
               <p className={s.cardText}>Recording Studio Saxophon</p>
             </div>
@@ -132,7 +145,20 @@ const PortfolioDesctop = () => {
                 onClick={() => handleVideoButtonClick(5)}
               />
             ))}
-            <img src={sliderTablet[5]} alt="card" />
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[5]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[5]} alt="card" />*/}
             <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
               <p className={s.cardText}>Archer Health</p>
             </div>
@@ -256,7 +282,20 @@ const PortfolioDesctop = () => {
                 onClick={() => handleVideoButtonClick(12)}
               />
             ))}
-            <img src={sliderTablet[13]} alt="card" />
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[12]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[13]} alt="card" />*/}
             <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
               <p className={s.cardText}>Map USA</p>
             </div>
