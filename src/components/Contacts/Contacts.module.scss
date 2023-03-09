@@ -1,14 +1,18 @@
 .contactsWrapper{
+  margin: 0 auto;
   @media screen and (min-width: 768px) {
  display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+
+    //justify-content: center;
     border-radius: 20.0372px;
-    overflow: hidden;
+    //width: 500px;
+    //overflow: hidden;
   }
 }
 
 .contactsMedia{
+
   margin-top: 60px;
   padding: 35px 19px;
   display: flex;
@@ -20,10 +24,13 @@
   background: white;
   @media screen and (min-width: 768px) {
     margin-right: 20px;
-    height: 300px;
-    width: 100%;
+    width: 500px;
+    //height: 500px;
+    //width: 100%;
     justify-content: flex-start;
   }
+
+
 
   &>h3{
     font-weight: 400;
@@ -132,3 +139,8 @@ textarea{
   color: var(--accent-text-color);
   opacity: 0.5;
 }
+
+
+
+
+
