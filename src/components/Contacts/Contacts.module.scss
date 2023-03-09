@@ -131,6 +131,10 @@ textarea{
   font-size: 12px;
   line-height: 1.2;
   color: var(--accent-text-color);
+  &:focus{
+    outline: 1px solid #ABABD1;
+    border-radius: 11.9177px;
+  }
 }
 ::placeholder{
  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
