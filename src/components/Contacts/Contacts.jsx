@@ -70,57 +70,55 @@ const Contacts = () => {
   };
 
   return (
-    <Container>
-      <div className={s.contactsWrapper}>
-        <div className={s.contactsMedia}>
-          <h3 className={s.contactsTitle}>Contact us</h3>
-          <form className={s.contactForm} onSubmit={sendEmail}>
-            <label>
-              <input
-                type="text"
-                name="name"
-                className={s.contactInput}
-                placeholder="Enter your name"
-              />
-            </label>
-            <label>
-              <input
-                type="email"
-                name="email"
-                className={s.contactInput}
-                placeholder="Enter your email"
-              />
-            </label>
-            <textarea
-              name="message"
+    <div className={s.contactsWrapper}>
+      <div className={s.contactsMedia}>
+        <h3 className={s.contactsTitle}>Contact us</h3>
+        <form className={s.contactForm} onSubmit={sendEmail}>
+          <label>
+            <input
+              type="text"
+              name="name"
               className={s.contactInput}
-              rows={10}
-              placeholder="Add your message"
+              placeholder="Enter your name"
             />
-            <input className={s.btnSubmit} type="submit" value="Send" />
-          </form>
+          </label>
+          <label>
+            <input
+              type="email"
+              name="email"
+              className={s.contactInput}
+              placeholder="Enter your email"
+            />
+          </label>
+          <textarea
+            name="message"
+            className={s.contactInput}
+            rows={10}
+            placeholder="Add your message"
+          />
+          <input className={s.btnSubmit} type="submit" value="Send" />
+        </form>
+      </div>
+      <div className={s.contactsMedia}>
+        <h3 className={s.contactsTitle}>Bielik Serhii</h3>
+        <div className={s.contactContainer}>
+          <Mail />
+          <a href="mailto:belikaarbo@gmail.com">belikaarbo@gmail.com</a>
         </div>
-        <div className={s.contactsMedia}>
-          <h3 className={s.contactsTitle}>Bielik Serhii</h3>
-          <div className={s.contactContainer}>
-            <Mail />
-            <a href="mailto:belikaarbo@gmail.com">belikaarbo@gmail.com</a>
-          </div>
-          <div className={s.contactContainer}>
-            <Tel />
-            <a href="tel:+380503934859">+380503934859</a>
-          </div>
-          <div className={s.links}>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              <Linkedin className={s.iconLink} />
-            </a>
-            <a href="https://t.me/Suzui_B" target="_blank" rel="noreferrer">
-              <Telegramm className={s.iconLink} />
-            </a>
-          </div>
+        <div className={s.contactContainer}>
+          <Tel />
+          <a href="tel:+380503934859">+380503934859</a>
+        </div>
+        <div className={s.links}>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <Linkedin className={s.iconLink} />
+          </a>
+          <a href="https://t.me/Suzui_B" target="_blank" rel="noreferrer">
+            <Telegramm className={s.iconLink} />
+          </a>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
