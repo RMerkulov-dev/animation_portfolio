@@ -251,13 +251,13 @@ const PortfolioDesctop = () => {
             {VIDEOS.map((videoUrl, index) => (
               <GoPlay
                 className={s.iconPlay}
-                style={{ fill: "#E8DCCC" }}
+                style={{ fill: "#ABABD1" }}
                 key={index}
                 onClick={() => handleVideoButtonClick(12)}
               />
             ))}
             <img src={sliderTablet[13]} alt="card" />
-            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
               <p className={s.cardText}>Map USA</p>
             </div>
           </li>
