@@ -12,15 +12,16 @@
   margin-top: 60px;
   padding: 35px 19px;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   box-shadow: -2.50465px 0px 15.0279px rgba(12, 90, 107, 0.05), 5.00931px 2.50465px 15.0279px 0.500931px rgba(12, 90, 107, 0.05);
   border-radius: 20.0372px;
   background: white;
   @media screen and (min-width: 768px) {
-    box-shadow: none;
-    border-radius:0;
+    margin-right: 20px;
+
+
     height: 300px;
     width: 100%;
     justify-content: flex-start;
