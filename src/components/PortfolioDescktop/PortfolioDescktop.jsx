@@ -104,6 +104,7 @@ const PortfolioDesctop = () => {
 
           <li className={s.item5}>
             {/*<img src={sliderTablet[4]} alt="card" />*/}
+
             <div className={s.cardVideoBox}>
               <video
                 className={s.cardVideo}
@@ -152,6 +153,14 @@ const PortfolioDesctop = () => {
           </li>
           <li className={s.item8}>
             {/*<img src={sliderTablet[7]} alt="card" />*/}
+            {VIDEOS.map((videoUrl, index) => (
+              <GoPlay
+                className={s.iconPlay}
+                style={{ fill: "#E8DCCC" }}
+                key={index}
+                onClick={() => handleVideoButtonClick(6)}
+              />
+            ))}
             <div className={s.cardVideoBox}>
               <video
                 className={s.cardVideo}
@@ -199,6 +208,14 @@ const PortfolioDesctop = () => {
           </li>
           <li className={s.item11}>
             {/*<img src={sliderTablet[11]} alt="card" />*/}
+            {VIDEOS.map((videoUrl, index) => (
+              <GoPlay
+                className={s.iconPlay}
+                style={{ fill: "#FFFFFF" }}
+                key={index}
+                onClick={() => handleVideoButtonClick(10)}
+              />
+            ))}
             <div className={s.cardVideoBox}>
               <video
                 className={s.cardVideo}
