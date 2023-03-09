@@ -34,12 +34,13 @@ const Contacts = () => {
       .send(
         "service_53jfxv6",
         "template_0w8gr42",
-        { fromName: fromName, from_email: fromEmail, message_html: message },
+        { from_name: fromName, from_email: fromEmail, message_html: message },
         "YvY8uSNnL7NliQW8N"
       )
       .then(
         (result) => {
-          console.log(result.text);
+          e.target.reset();
+          alert("Your email was sent successfully!");
         },
         (error) => {
           console.log(error.text);
