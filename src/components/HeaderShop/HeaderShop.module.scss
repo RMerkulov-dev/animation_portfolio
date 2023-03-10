@@ -1,0 +1,29 @@
+.headerContent{
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeIcon{
+  width: 30px;
+  height: 30px;
+  color: var(--accent-text-color);
+  cursor: pointer;
+}
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.cartIcon{
+  width: 30px;
+  height: 30px;
+  color: var(--accent-text-color);
+  cursor: pointer;
+}
