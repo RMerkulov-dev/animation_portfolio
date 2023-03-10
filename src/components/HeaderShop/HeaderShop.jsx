@@ -8,6 +8,8 @@ import { CgWebsite } from "react-icons/cg";
 import { FaUserCircle } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 
+import { motion } from "framer-motion";
+
 const HeaderShop = () => {
   return (
     <header>
@@ -21,7 +23,7 @@ const HeaderShop = () => {
             <NavLink to="/cart" className={s.cart}>
               <FiShoppingCart className={s.headerIcon} />
             </NavLink>
-            <FaUserCircle className={s.headerIcon} />
+            FaUserCircle className={s.headerIcon} />
           </div>
         </div>
       </Container>
