@@ -5,6 +5,8 @@ import Container from "../Container/Container";
 import { NavLink } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
+import { FaUserCircle } from "react-icons/fa";
+import { AiOutlineHeart } from "react-icons/ai";
 
 const HeaderShop = () => {
   return (
@@ -12,11 +14,15 @@ const HeaderShop = () => {
       <Container>
         <div className={s.headerContent}>
           <NavLink to="/" className={s.logo}>
-            <CgWebsite className={s.homeIcon} />
+            <CgWebsite className={s.headerIcon} />
           </NavLink>
-          <NavLink to="/cart" className={s.cart}>
-            <FiShoppingCart className={s.cartIcon} />
-          </NavLink>
+          <div className={s.navHeader}>
+            <AiOutlineHeart className={s.headerIcon} />
+            <NavLink to="/cart" className={s.cart}>
+              <FiShoppingCart className={s.headerIcon} />
+            </NavLink>
+            <FaUserCircle className={s.headerIcon} />
+          </div>
         </div>
       </Container>
     </header>

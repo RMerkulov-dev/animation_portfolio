@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
 }
-.homeIcon{
+.headerIcon{
   width: 30px;
   height: 30px;
   color: var(--accent-text-color);
@@ -21,9 +21,10 @@
   justify-content: center;
 
 }
-.cartIcon{
-  width: 30px;
-  height: 30px;
-  color: var(--accent-text-color);
-  cursor: pointer;
+
+.navHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
