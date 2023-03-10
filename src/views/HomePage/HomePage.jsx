@@ -9,6 +9,7 @@ import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useEffect, useState } from "react";
 import HeaderLayout from "../../components/Layout/HeaderLayout";
 import PortfolioLayout from "../../components/Layout/PortfolioLayout";
+import Helmet from "../../components/Helmet/Helmet";
 // import Header from "../../components/Header/Header";
 // import PortfolioDescktop from "../../components/PortfolioDescktop/PortfolioDescktop";
 // import SliderMobile from "../../components/SliderMobile/SliderMobile";
@@ -27,7 +28,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className={s.homePageContent}>
+    <Helmet className={s.homePageContent} title="Portfolio">
       {openModal && (
         <ModalVideo openModal={openModal} setOpenModal={setOpenModal} />
       )}
@@ -132,7 +133,7 @@ const HomePage = () => {
       <footer>
         <p>&copy; 2023 All rights reserved</p>
       </footer>
-    </div>
+    </Helmet>
   );
 };
 

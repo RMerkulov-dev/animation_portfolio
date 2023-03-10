@@ -1,1 +1,21 @@
-
+.heroContent{
+    background-image: url("../../assets/hero/hero_shop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 300px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &>h2{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+  }
+  &>p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ccb5b5;
+  }
+}

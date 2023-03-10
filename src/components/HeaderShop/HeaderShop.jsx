@@ -19,15 +19,17 @@ const HeaderShop = () => {
             <CgWebsite className={s.headerIcon} />
           </NavLink>
           <div className={s.navHeader}>
-            <motion.div whileTap={{ scale: 1.2 }}>
+            <motion.div whileTap={{ scale: 1.2 }} className={s.iconWrapper}>
+              <span className={s.budgetIcon}>2</span>
               <AiOutlineHeart className={s.headerIcon} />
             </motion.div>
-            <motion.div whileTap={{ scale: 1.2 }}>
+            <motion.div whileTap={{ scale: 1.2 }} className={s.iconWrapper}>
               <NavLink to="/cart" className={s.cart}>
+                <span className={s.budgetIcon}>2</span>
                 <FiShoppingCart className={s.headerIcon} />
               </NavLink>
             </motion.div>
-            <motion.div whileTap={{ scale: 1.2 }}>
+            <motion.div whileTap={{ scale: 1.2 }} className={s.iconWrapper}>
               <FaUserCircle className={s.headerIcon} />
             </motion.div>
           </div>
