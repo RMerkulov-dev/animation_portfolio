@@ -3,6 +3,8 @@ import s from "./SoundsList.module.scss";
 import SoundsCard from "./SoundsCard/SoundsCard";
 
 import { CiShoppingCart } from "react-icons/ci";
+import { RiMusic2Line } from "react-icons/ri";
+import { FiPlay } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const SoundsList = () => {
@@ -11,11 +13,13 @@ const SoundsList = () => {
       <div className={s.soundsList}>
         <SoundsCard>
           <div className={s.soundWrapper}>
-            <h3 className={s.soundName}>
-              <Link to="/shop/id" className={s.soundName}>
-                Spring vibes
+            <h3 className={s.soundName}>Spring vibes</h3>
+            <div className={s.soundLinks}>
+              <Link to="/shop/id">
+                <RiMusic2Line className={s.linkIcon} />
               </Link>
-            </h3>
+              <FiPlay className={s.linkIcon} />
+            </div>
             <div className={s.soundContent}>
               <div>
                 <span>20</span>
@@ -27,14 +31,16 @@ const SoundsList = () => {
         </SoundsCard>
         <SoundsCard>
           <div className={s.soundWrapper}>
-            <h3 className={s.soundName}>
-              <Link to="/shop/id" className={s.soundName}>
-                Best moments
+            <h3 className={s.soundName}>Spring vibes</h3>
+            <div className={s.soundLinks}>
+              <Link to="/shop/id">
+                <RiMusic2Line className={s.linkIcon} />
               </Link>
-            </h3>
+              <FiPlay className={s.linkIcon} />
+            </div>
             <div className={s.soundContent}>
               <div>
-                <span>40</span>
+                <span>20</span>
                 <span>USD</span>
               </div>
               <CiShoppingCart className="cart-icon" />
@@ -43,14 +49,16 @@ const SoundsList = () => {
         </SoundsCard>
         <SoundsCard>
           <div className={s.soundWrapper}>
-            <h3 className={s.soundName}>
-              <Link to="/shop/id" className={s.soundName}>
-                Techno works
+            <h3 className={s.soundName}>Spring vibes</h3>
+            <div className={s.soundLinks}>
+              <Link to="/shop/id">
+                <RiMusic2Line className={s.linkIcon} />
               </Link>
-            </h3>
+              <FiPlay className={s.linkIcon} />
+            </div>
             <div className={s.soundContent}>
               <div>
-                <span>80</span>
+                <span>20</span>
                 <span>USD</span>
               </div>
               <CiShoppingCart className="cart-icon" />

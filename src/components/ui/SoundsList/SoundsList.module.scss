@@ -9,16 +9,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .soundContent{
   position: absolute;
-  bottom: -50px;
+  bottom: -30px;
   right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
-.soundName{
+.soundLinks{
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+}
+.linkIcon{
   color: var(--background-color);
+  width: 30px;
+  height: 30px;
 }

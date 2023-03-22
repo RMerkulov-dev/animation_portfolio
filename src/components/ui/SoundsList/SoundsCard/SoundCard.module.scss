@@ -12,5 +12,11 @@
   font-weight: bold;
   color: var(--background-color);
   opacity: 0.9;
+  transition: 0.3s;
+
+  &:hover{
+    transform: scale(0.97);
+    transition: 0.3s;
+  }
 }
 
