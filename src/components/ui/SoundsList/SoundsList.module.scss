@@ -1,0 +1,22 @@
+.soundsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.soundWrapper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.soundContent{
+  position: absolute;
+  bottom: -50px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+

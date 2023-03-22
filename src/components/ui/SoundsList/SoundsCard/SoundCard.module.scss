@@ -1,0 +1,16 @@
+.soundImageWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../../assets/shop/song.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--background-color);
+  opacity: 0.9;
+}
+
