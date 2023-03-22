@@ -1,27 +1,63 @@
 import React from "react";
 import s from "./SoundsList.module.scss";
 import SoundsCard from "./SoundsCard/SoundsCard";
-import { sounds } from "../../../helpers/sounds";
+
 import { CiShoppingCart } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const SoundsList = () => {
   return (
     <>
-      <ul className={s.soundsList}>
-        {sounds.map((sound) => (
-          <li>
-            <SoundsCard>
-              <div className={s.soundWrapper}>
-                <p className={s.soundName}>{sound.title}</p>
-                <div className={s.soundContent}>
-                  <span>{sound.price} $</span>
-                  <CiShoppingCart className="cart-icon" />
-                </div>
+      <div className={s.soundsList}>
+        <SoundsCard>
+          <div className={s.soundWrapper}>
+            <h3 className={s.soundName}>
+              <Link to="/shop/id" className={s.soundName}>
+                Spring vibes
+              </Link>
+            </h3>
+            <div className={s.soundContent}>
+              <div>
+                <span>20</span>
+                <span>USD</span>
               </div>
-            </SoundsCard>
-          </li>
-        ))}
-      </ul>
+              <CiShoppingCart className="cart-icon" />
+            </div>
+          </div>
+        </SoundsCard>
+        <SoundsCard>
+          <div className={s.soundWrapper}>
+            <h3 className={s.soundName}>
+              <Link to="/shop/id" className={s.soundName}>
+                Best moments
+              </Link>
+            </h3>
+            <div className={s.soundContent}>
+              <div>
+                <span>40</span>
+                <span>USD</span>
+              </div>
+              <CiShoppingCart className="cart-icon" />
+            </div>
+          </div>
+        </SoundsCard>
+        <SoundsCard>
+          <div className={s.soundWrapper}>
+            <h3 className={s.soundName}>
+              <Link to="/shop/id" className={s.soundName}>
+                Techno works
+              </Link>
+            </h3>
+            <div className={s.soundContent}>
+              <div>
+                <span>80</span>
+                <span>USD</span>
+              </div>
+              <CiShoppingCart className="cart-icon" />
+            </div>
+          </div>
+        </SoundsCard>
+      </div>
     </>
   );
 };
