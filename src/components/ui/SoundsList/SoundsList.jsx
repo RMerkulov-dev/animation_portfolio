@@ -6,8 +6,8 @@ const SoundsList = ({ sounds }) => {
   return (
     <>
       <div className={s.soundsList}>
-        {sounds?.map((sound) => (
-          <SoundsCard sound={sound} key={sound.id} />
+        {sounds?.map((sound, i) => (
+          <SoundsCard sound={sound} key={i} />
         ))}
       </div>
     </>
