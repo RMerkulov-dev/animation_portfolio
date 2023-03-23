@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./SoundCard.module.scss";
 
-import { RiMusic2Line } from "react-icons/ri";
+import { RiMailSendLine, RiMusic2Line } from "react-icons/ri";
 import { FiPlay } from "react-icons/fi";
 import { CiShoppingCart } from "react-icons/ci";
 
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../../../redux/slices/cartSlice";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const SoundsCard = ({ sound }) => {
   const dispatch = useDispatch();
@@ -23,7 +23,17 @@ const SoundsCard = ({ sound }) => {
         price: sound.price,
       })
     );
-    alert("Product added to the cart");
+    toast.success("Product added to the cart", {
+      icon: <CiShoppingCart />,
+      style: {
+        backgroundColor: "rgba(171,171,209,0.53)",
+        borderRadius: "8px",
+        boxShadow: " rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;",
+      },
+      progressBarStyle: {
+        backgroundColor: "#ABABD1",
+      },
+    });
   };
 
   return (

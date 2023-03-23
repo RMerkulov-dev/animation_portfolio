@@ -44,13 +44,6 @@ const Contacts = () => {
       .then(
         (result) => {
           toast.success(" Your email was sent!", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
             icon: <RiMailSendLine />,
             style: {
               backgroundColor: "rgba(171,171,209,0.53)",
