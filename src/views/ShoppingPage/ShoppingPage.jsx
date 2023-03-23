@@ -49,6 +49,11 @@ const ShoppingPage = () => {
           </div>
         </Container>
       </section>
+      <footer className={s.footer}>
+        <Container>
+          <p>&copy; 2023 All rights reserved</p>
+        </Container>
+      </footer>
     </Helmet>
   );
 };
