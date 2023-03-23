@@ -7,7 +7,7 @@ import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 
 import { GoPlay } from "react-icons/go";
-import { VIDEOS } from "../../helpers/VIDEO";
+import { VIDEOS } from "../../helpers/videos";
 import { slider } from "../../helpers/cards";
 
 const SliderMobile = () => {
