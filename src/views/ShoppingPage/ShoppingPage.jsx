@@ -9,12 +9,19 @@ import { useEffect, useState } from "react";
 const year = new Date().getFullYear();
 
 const ShoppingPage = () => {
-  const [sounds, setSounds] = useState(SOUNDS);
+  const [soundsTrends, setSoundsTrends] = useState([]);
+  const [bestSales, setBestSales] = useState([]);
 
   useEffect(() => {
-    const filteredSounds = SOUNDS.filter((item) => item.category === "techno");
+    const filteredTrendingSounds = SOUNDS.filter(
+      (item) => item.category === "techno"
+    );
 
-    setSounds(filteredSounds);
+    const filteredBestSalesSounds = SOUNDS.filter(
+      (item) => item.category === "house"
+    );
+    setSoundsTrends(filteredTrendingSounds);
+    setBestSales(filteredBestSalesSounds);
   }, []);
 
   return (
@@ -30,7 +37,15 @@ const ShoppingPage = () => {
         <Container>
           <h2 className="tittle-h2">Trending songs</h2>
           <div className={s.trendsList}>
-            <SoundsList sounds={sounds} />
+            <SoundsList sounds={soundsTrends} />
+          </div>
+        </Container>
+      </section>
+      <section className={s.section}>
+        <Container>
+          <h2 className="tittle-h2">Best sales songs</h2>
+          <div className={s.trendsList}>
+            <SoundsList sounds={bestSales} />
           </div>
         </Container>
       </section>

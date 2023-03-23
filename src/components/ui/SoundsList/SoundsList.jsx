@@ -6,7 +6,7 @@ const SoundsList = ({ sounds }) => {
   return (
     <>
       <div className={s.soundsList}>
-        {sounds.map((sound) => (
+        {sounds?.map((sound) => (
           <SoundsCard sound={sound} key={sound.id} />
         ))}
       </div>
