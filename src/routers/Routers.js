@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import HomePage from "../views/HomePage/HomePage";
-import ShoppingPage from "../views/ShoppingPage/ShoppingPage";
-import ProductDetails from "../views/ProductDetails/ProductDetails";
-import Cart from "../views/Cart/Cart";
-import Checkout from "../views/Chekout/Chekout";
-import LoginPage from "../views/LoginPage/LoginPage";
-import SignupPage from "../views/SignupPage/SignupPage";
+import HomePage from "../views/homePage/HomePage";
+import ShoppingPage from "../views/shoppingPage/ShoppingPage";
+import ProductDetails from "../views/productDetails/ProductDetails";
+import Cart from "../views/cart/Cart";
+import Checkout from "../views/chekout/Chekout";
+import LoginPage from "../views/loginPage/LoginPage";
+import SignupPage from "../views/signupPage/SignupPage";
 
 const Routers = () => {
   return (

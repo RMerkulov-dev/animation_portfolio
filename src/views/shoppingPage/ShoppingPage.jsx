@@ -34,6 +34,9 @@ const ShoppingPage = () => {
         </div>
       </section>
       <section className={s.section}>
+        <section className={s.section}>
+          <Container></Container>
+        </section>
         <Container>
           <h2 className="tittle-h2">Trending songs</h2>
           <div className={s.trendsList}>

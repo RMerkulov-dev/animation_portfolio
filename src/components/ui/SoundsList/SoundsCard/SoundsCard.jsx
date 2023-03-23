@@ -7,7 +7,7 @@ import { CiShoppingCart } from "react-icons/ci";
 
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { cartActions } from "../../../../redux/slices/cartSlice";
+import { cartActions } from "../../../../redux/slices/cartSlice/cartSlice";
 
 import { toast } from "react-toastify";
 

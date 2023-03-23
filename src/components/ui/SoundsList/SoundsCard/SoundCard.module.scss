@@ -42,7 +42,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 30px;
 
 }
@@ -50,4 +49,5 @@
   color: var(--background-color);
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
