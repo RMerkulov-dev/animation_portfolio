@@ -1,6 +1,6 @@
 import s from "./PortfolioDesctop.module.scss";
-import { sliderTablet } from "../../helpers/cards";
-import { VIDEOS } from "../../helpers/videos";
+import { sliderTablet } from "../../data/cards";
+import { VIDEOS } from "../../data/videos";
 import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 import { GoPlay } from "react-icons/go";

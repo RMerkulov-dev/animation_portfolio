@@ -7,8 +7,8 @@ import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 
 import { GoPlay } from "react-icons/go";
-import { VIDEOS } from "../../helpers/videos";
-import { slider } from "../../helpers/cards";
+import { VIDEOS } from "../../data/videos";
+import { slider } from "../../data/cards";
 
 const SliderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -3,8 +3,9 @@ import HeaderShop from "../../components/HeaderShop/HeaderShop";
 import Helmet from "../../components/Helmet/Helmet";
 import Container from "../../components/Container/Container";
 import SoundsList from "../../components/ui/SoundsList/SoundsList";
-import { SOUNDS } from "../../helpers/sounds";
+import { SOUNDS } from "../../data/sounds";
 import { useEffect, useState } from "react";
+import Shop from "../shop/Shop";
 
 const year = new Date().getFullYear();
 
@@ -52,6 +53,7 @@ const ShoppingPage = () => {
           </div>
         </Container>
       </section>
+      <Shop />
       <footer className={s.footer}>
         <Container>
           <p>&copy; 2023 All rights reserved</p>
