@@ -90,12 +90,25 @@ code {
   font-size: 15px;
 }
 
-
-
-
 //ICONS
 .cart-icon{
   color: white;
   width: 30px;
   height: auto;
+}
+//COMPONENTS
+.section{
+  padding: 30px 0;
+}
+.footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14.9701px;
+  line-height: 1.2;
+  text-align: center;
+  color: rgba(171, 171, 209, 0.46);
 }

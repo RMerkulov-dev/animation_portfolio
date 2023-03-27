@@ -34,8 +34,8 @@ const ShoppingPage = () => {
           <h2>Find the best song for you!</h2>
         </div>
       </section>
-      <section className={s.section}>
-        <section className={s.section}>
+      <section className="section">
+        <section className="section">
           <Container></Container>
         </section>
         <Container>
@@ -45,7 +45,7 @@ const ShoppingPage = () => {
           </div>
         </Container>
       </section>
-      <section className={s.section}>
+      <section className="section">
         <Container>
           <h2 className="tittle-h2">Best sales songs</h2>
           <div className={s.trendsList}>
@@ -54,7 +54,7 @@ const ShoppingPage = () => {
         </Container>
       </section>
       <Shop />
-      <footer className={s.footer}>
+      <footer className="footer">
         <Container>
           <p>&copy; 2023 All rights reserved</p>
         </Container>
