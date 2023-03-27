@@ -73,7 +73,7 @@ const Shop = () => {
       <section>
         <Container>
           {soundsData.length === 0 ? (
-            <h1>No sounds are found</h1>
+            <p className={s.notFound}>No sounds are found</p>
           ) : (
             <SoundsList sounds={soundsData} />
           )}
