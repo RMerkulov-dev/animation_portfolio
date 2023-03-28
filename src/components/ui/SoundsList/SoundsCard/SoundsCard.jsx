@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./SoundCard.module.scss";
 
-import { RiMailSendLine, RiMusic2Line } from "react-icons/ri";
+import { RiMusic2Line } from "react-icons/ri";
 import { FiPlay } from "react-icons/fi";
 import { CiShoppingCart } from "react-icons/ci";
 
