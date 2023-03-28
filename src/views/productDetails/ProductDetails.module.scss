@@ -1,4 +1,5 @@
 .soundImageWrapper{
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +19,7 @@
 }
 
 .detailsWrapper{
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -28,8 +29,18 @@
   font-size: 15px;
   text-align: center;
 }
+.deskTitle{
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--accent-text-color);
+}
+.categoryTitle{
+  font-size: 15px;
+  color: #777788;
+}
 .shopButton{
-  margin-top: 20px;
+  margin-top: 30px;
   gap: 5px;
   display: flex;
   align-items: center;
@@ -52,4 +63,47 @@
 .cartIcon{
   width: 20px;
   height: 20px;
+}
+.descrWrapper{
+  display: flex;
+  gap: 30px;
+}
+.tabWrapper{
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--accent-text-color);
+}
+.descTitle{
+  font-size: 15px;
+  line-height: 1.2;
+  color: #777788;
+  cursor: pointer;
+}
+.descTitle_active{
+  font-size: 15px;
+  line-height: 1.2;
+  color: #111111;
+  cursor: pointer;
+}
+.reviewWrapper{
+  margin-top: 20px;
+  & p:first-child{
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.2;
+  & span{
+    color: var(--background-color);
+    background: var(--accent-text-color);
+    padding: 3px 5px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  }
+  & p{
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: var(--accent-text-color);
+  }
 }

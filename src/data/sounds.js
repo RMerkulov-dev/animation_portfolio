@@ -98,6 +98,10 @@ export const SOUNDS = [
         rating: 4.7,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
+      {
+        rating: 4.7,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
     ],
     avgRating: 4.5,
   },
