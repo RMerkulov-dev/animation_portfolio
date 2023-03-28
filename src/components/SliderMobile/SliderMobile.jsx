@@ -264,6 +264,38 @@ const SliderMobile = () => {
               <p className={s.sliderText}>Map USA</p>
             </div>
           </SwiperSlide>
+          <SwiperSlide>
+            <div className={s.cardImageWrapper}>
+              {VIDEOS.map((videoUrl, index) => (
+                <GoPlay
+                  className={s.iconPlay}
+                  style={{ fill: "#ABABD1" }}
+                  key={index}
+                  onClick={() => handleVideoButtonClick(13)}
+                />
+              ))}
+              <img src={slider[13]} alt="card" />
+            </div>
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
+              <p className={s.sliderText}>Map USA</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={s.cardImageWrapper}>
+              {VIDEOS.map((videoUrl, index) => (
+                <GoPlay
+                  className={s.iconPlay}
+                  style={{ fill: "#ABABD1" }}
+                  key={index}
+                  onClick={() => handleVideoButtonClick(14)}
+                />
+              ))}
+              <img src={slider[14]} alt="card" />
+            </div>
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
+              <p className={s.sliderText}>Map USA</p>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
     </>

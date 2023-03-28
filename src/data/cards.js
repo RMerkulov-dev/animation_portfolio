@@ -14,6 +14,8 @@ import Indastry from "../assets/portfolio/indastry.jpg";
 import Burger from "../assets/portfolio/burger.jpg";
 import Fr from "../assets/portfolio/fr.jpg";
 import Map from "../assets/portfolio/map.jpg";
+import Arpanet from "../assets/portfolio/arpanet.jpg";
+import Office from "../assets/portfolio/office.jpg";
 
 export const slider = [
   Studio,
@@ -29,6 +31,8 @@ export const slider = [
   Burger,
   Fr,
   Map,
+  Arpanet,
+  Office,
 ];
 
 export const sliderTablet = [
