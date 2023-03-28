@@ -1,6 +1,6 @@
 import s from "./PortfolioDesctop.module.scss";
-import { sliderTablet } from "../../helpers/cards";
-import { VIDEOS } from "../../helpers/VIDEO";
+import { sliderTablet } from "../../data/cards";
+import { VIDEOS } from "../../data/videos";
 import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 import { GoPlay } from "react-icons/go";
@@ -277,7 +277,7 @@ const PortfolioDesctop = () => {
             {VIDEOS.map((videoUrl, index) => (
               <GoPlay
                 className={s.iconPlay}
-                style={{ fill: "#ABABD1" }}
+                style={{ fill: "#E8DCCC" }}
                 key={index}
                 onClick={() => handleVideoButtonClick(12)}
               />
@@ -296,8 +296,62 @@ const PortfolioDesctop = () => {
               ></video>
             </div>
             {/*<img src={sliderTablet[13]} alt="card" />*/}
-            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
               <p className={s.cardText}>Map USA</p>
+            </div>
+          </li>
+          <li className={s.item14}>
+            {VIDEOS.map((videoUrl, index) => (
+              <GoPlay
+                className={s.iconPlay}
+                style={{ fill: "#E8DCCC" }}
+                key={index}
+                onClick={() => handleVideoButtonClick(13)}
+              />
+            ))}
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[13]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[13]} alt="card" />*/}
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>Arpa net</p>
+            </div>
+          </li>
+          <li className={s.item15}>
+            {VIDEOS.map((videoUrl, index) => (
+              <GoPlay
+                className={s.iconPlay}
+                style={{ fill: "#E1A9C4" }}
+                key={index}
+                onClick={() => handleVideoButtonClick(14)}
+              />
+            ))}
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[14]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[13]} alt="card" />*/}
+            <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
+              <p className={s.cardText}>Foxes print</p>
             </div>
           </li>
         </ul>

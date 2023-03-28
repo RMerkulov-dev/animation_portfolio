@@ -1,0 +1,27 @@
+.heroContent{
+    background-image: url("../../assets/hero/hero_shop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 300px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &>h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  }
+  &>p{
+    font-size: 10px;
+    font-weight: bold;
+    color: #ccb5b5;
+  }
+}
+
+.trendsList{
+  margin-top: 20px;
+}
+

@@ -7,8 +7,8 @@ import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 
 import { GoPlay } from "react-icons/go";
-import { VIDEOS } from "../../helpers/VIDEO";
-import { slider } from "../../helpers/cards";
+import { VIDEOS } from "../../data/videos";
+import { slider } from "../../data/cards";
 
 const SliderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -261,6 +261,38 @@ const SliderMobile = () => {
               <img src={slider[12]} alt="card" />
             </div>
             <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.sliderText}>Map USA</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={s.cardImageWrapper}>
+              {VIDEOS.map((videoUrl, index) => (
+                <GoPlay
+                  className={s.iconPlay}
+                  style={{ fill: "#ABABD1" }}
+                  key={index}
+                  onClick={() => handleVideoButtonClick(13)}
+                />
+              ))}
+              <img src={slider[13]} alt="card" />
+            </div>
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
+              <p className={s.sliderText}>Map USA</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={s.cardImageWrapper}>
+              {VIDEOS.map((videoUrl, index) => (
+                <GoPlay
+                  className={s.iconPlay}
+                  style={{ fill: "#ABABD1" }}
+                  key={index}
+                  onClick={() => handleVideoButtonClick(14)}
+                />
+              ))}
+              <img src={slider[14]} alt="card" />
+            </div>
+            <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
               <p className={s.sliderText}>Map USA</p>
             </div>
           </SwiperSlide>

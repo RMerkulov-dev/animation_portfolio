@@ -1,7 +1,5 @@
 import s from "./HomePage.module.scss";
-import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 import Container from "../../components/Container/Container";
-import SliderMobile from "../../components/SliderMobile/SliderMobile";
 
 import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
 import HeroMobileNew from "../../assets/hero/hero_mob.mp4";
@@ -9,8 +7,13 @@ import HeroDesktop from "../../assets/hero/hero_pc.mp4";
 import Contacts from "../../components/Contacts/Contacts";
 import ModalVideo from "../../components/ModalVideo/ModalVideo";
 import { useEffect, useState } from "react";
-import Header from "../../components/Header/Header";
-import PortfolioDescktop from "../../components/PortfolioDescktop/PortfolioDescktop";
+import HeaderLayout from "../../components/Layout/HeaderLayout";
+import PortfolioLayout from "../../components/Layout/PortfolioLayout";
+import Helmet from "../../components/Helmet/Helmet";
+// import Header from "../../components/Header/Header";
+// import PortfolioDescktop from "../../components/PortfolioDescktop/PortfolioDescktop";
+// import SliderMobile from "../../components/SliderMobile/SliderMobile";
+// import HeaderMobile from "../../components/HeaderMobile/HeaderMobile";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
@@ -20,19 +23,16 @@ const HomePage = () => {
     function handleResize() {
       setIsMobile(window.innerWidth <= 767);
     }
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className={s.homePageContent}>
+    <Helmet className={s.homePageContent} title="Portfolio">
       {openModal && (
         <ModalVideo openModal={openModal} setOpenModal={setOpenModal} />
       )}
-      {isMobile ? <HeaderMobile /> : <Header />}
-
+      <HeaderLayout />
       <section id="hero" className={s.heroSection}>
         {/*<Container>*/}
         <div className={s.heroContent}>
@@ -54,11 +54,7 @@ const HomePage = () => {
         <Container>
           <div id="portfolio" className={s.portfolioContent}>
             <h2 className={s.sectionTitle}>Portfolio</h2>
-            {isMobile ? (
-              <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
-            ) : (
-              <PortfolioDescktop />
-            )}
+            <PortfolioLayout />
           </div>
         </Container>
       </section>
@@ -134,10 +130,10 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <footer>
+      <footer className={s.footer}>
         <p>&copy; 2023 All rights reserved</p>
       </footer>
-    </div>
+    </Helmet>
   );
 };
 

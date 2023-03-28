@@ -11,6 +11,8 @@ import IndustryVideo from "../assets/video/industry.mp4";
 import BurgerVideo from "../assets/video/burger.mp4";
 import SportVideo from "../assets/video/sport.mp4";
 import MapVideo from "../assets/video/map.mp4";
+import Arpanet from "../assets/video/arpanet.mp4";
+import Office from "../assets/video/office.mp4";
 
 export const VIDEOS = [
   StudioVideo,
@@ -26,4 +28,6 @@ export const VIDEOS = [
   BurgerVideo,
   SportVideo,
   MapVideo,
+  Arpanet,
+  Office,
 ];
