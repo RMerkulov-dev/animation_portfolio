@@ -107,3 +107,18 @@
     color: var(--accent-text-color);
   }
 }
+.reviewTitle{
+  margin-top: 10px ;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #777788;
+}
+.reviewForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.formGroup{
+  width: 100%;
+}
