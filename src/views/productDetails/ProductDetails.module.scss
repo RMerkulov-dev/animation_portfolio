@@ -118,7 +118,53 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
+}
+.formReview{
+  width: 100%;
 }
 .formGroup{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  &>span{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #ABABD1;
+  }
+
+&>input{
   width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  border: 0.595886px solid #ABABD1;
+  border-radius: 11.9177px;
+  padding: 15px;
+  color: var(--accent-text-color);
+
+  &:focus{
+    outline: 1px solid #ABABD1;
+    border-radius: 11.9177px;
+  }
+}
+  &>textarea{
+    width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    border: 0.595886px solid #ABABD1;
+    border-radius: 11.9177px;
+    padding: 15px;
+    color: var(--accent-text-color);
+
+    &:focus{
+      outline: 1px solid #ABABD1;
+      border-radius: 11.9177px;
+    }
+  }
 }
