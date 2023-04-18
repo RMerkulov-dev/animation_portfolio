@@ -89,7 +89,7 @@ const PortfolioDesctop = () => {
                 </p>
                 <button
                   className={s.checkBtn}
-                  onClick={() => handleVideoButtonClick(15)}
+                  onClick={() => handleVideoButtonClick(currentVideoIndex)}
                 >
                   <RiSoundModuleFill className={s.checkIcon} />
                   OK
@@ -146,7 +146,10 @@ const PortfolioDesctop = () => {
                 className={s.iconPlay}
                 style={{ fill: "#E8DCCC" }}
                 key={index}
-                onClick={() => handleVideoButtonClick(2)}
+                onClick={() => {
+                  handleVideoButtonClick(2);
+                  setSound(false);
+                }}
               />
             ))}
             <img src={sliderTablet[2]} alt="card" />
@@ -160,7 +163,10 @@ const PortfolioDesctop = () => {
                 className={s.iconPlay}
                 style={{ fill: "#ABABD1" }}
                 key={index}
-                onClick={() => handleVideoButtonClick(4)}
+                onClick={() => {
+                  handleVideoButtonClick(4);
+                  setSound(false);
+                }}
               />
             ))}
             <img src={sliderTablet[3]} alt="card" />
@@ -414,7 +420,10 @@ const PortfolioDesctop = () => {
                 className={s.iconPlay}
                 style={{ fill: "#E8DCCC" }}
                 key={index}
-                onClick={onCheckSoundBtn}
+                onClick={() => {
+                  onCheckSoundBtn();
+                  setCurrentVideoIndex(15);
+                }}
               />
             ))}
             <div className={s.singleVideoBox}>
