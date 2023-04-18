@@ -96,7 +96,7 @@ const SliderMobile = () => {
                 </p>
                 <button
                   className={s.checkBtn}
-                  onClick={() => handleVideoButtonClick(15)}
+                  onClick={() => handleVideoButtonClick(currentVideoIndex)}
                 >
                   <RiSoundModuleFill className={s.checkIcon} />
                   OK
@@ -359,7 +359,10 @@ const SliderMobile = () => {
                   className={s.iconPlay}
                   style={{ fill: "#E8DCCC" }}
                   key={index}
-                  onClick={onCheckSoundBtn}
+                  onClick={() => {
+                    onCheckSoundBtn();
+                    setCurrentVideoIndex(15);
+                  }}
                 />
               ))}
               <img src={slider[15]} alt="card" />
