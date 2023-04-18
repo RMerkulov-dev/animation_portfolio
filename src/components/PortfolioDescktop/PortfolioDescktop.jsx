@@ -4,14 +4,23 @@ import { VIDEOS } from "../../data/videos";
 import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 import { GoPlay } from "react-icons/go";
+import { RiSoundModuleFill } from "react-icons/ri";
 
 const PortfolioDesctop = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCheck, setIsCheck] = useState(false);
+  const [sound, setSound] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(-1);
 
   const handleVideoButtonClick = (videoIndex) => {
     setCurrentVideoIndex(videoIndex);
     setIsOpen(true);
+    setIsCheck(false);
+  };
+
+  const onCheckSoundBtn = () => {
+    setIsCheck(true);
+    setSound(true);
   };
 
   const getCurrentVideoPlayer = () => {
@@ -20,15 +29,28 @@ const PortfolioDesctop = () => {
     }
     const videoUrl = VIDEOS[currentVideoIndex];
     return (
-      <video
-        controls
-        autoPlay
-        className={s.modalVideo}
-        src={videoUrl}
-        type="video/mp4"
-        muted
-        loop="true"
-      ></video>
+      <>
+        {!sound ? (
+          <video
+            controls
+            autoPlay
+            className={s.modalVideo}
+            src={videoUrl}
+            type="video/mp4"
+            muted
+            loop="true"
+          ></video>
+        ) : (
+          <video
+            controls
+            autoPlay
+            className={s.modalVideo}
+            src={videoUrl}
+            type="video/mp4"
+            loop="true"
+          ></video>
+        )}
+      </>
     );
   };
 
@@ -42,6 +64,38 @@ const PortfolioDesctop = () => {
         {isOpen && (
           <ModalVideo onClose={handleClose}>
             {getCurrentVideoPlayer()}
+          </ModalVideo>
+        )}
+        {isCheck && (
+          <ModalVideo onClose={handleClose}>
+            <div className={s.checkWrapper}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "20px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "25px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Check your volume
+                </p>
+                <button
+                  className={s.checkBtn}
+                  onClick={() => handleVideoButtonClick(15)}
+                >
+                  <RiSoundModuleFill className={s.checkIcon} />
+                  OK
+                </button>
+              </div>
+            </div>
           </ModalVideo>
         )}
         <ul className={s.portfolioList}>
@@ -352,6 +406,33 @@ const PortfolioDesctop = () => {
             {/*<img src={sliderTablet[13]} alt="card" />*/}
             <div className={s.cardDesc} style={{ background: "#E1A9C4" }}>
               <p className={s.cardText}>Foxes print</p>
+            </div>
+          </li>
+          <li className={s.item16}>
+            {VIDEOS.map((videoUrl, index) => (
+              <GoPlay
+                className={s.iconPlay}
+                style={{ fill: "#E8DCCC" }}
+                key={index}
+                onClick={onCheckSoundBtn}
+              />
+            ))}
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[15]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[13]} alt="card" />*/}
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>Sound Animation</p>
             </div>
           </li>
         </ul>

@@ -24,10 +24,6 @@ const SliderMobile = () => {
     setIsCheck(false);
   };
 
-  const checkSound = () => {
-    handleVideoButtonClick(15);
-  };
-
   const onCheckSoundBtn = () => {
     setIsCheck(true);
     setSound(true);
@@ -363,7 +359,7 @@ const SliderMobile = () => {
                   className={s.iconPlay}
                   style={{ fill: "#E8DCCC" }}
                   key={index}
-                  onClick={() => onCheckSoundBtn()}
+                  onClick={onCheckSoundBtn}
                 />
               ))}
               <img src={slider[15]} alt="card" />
