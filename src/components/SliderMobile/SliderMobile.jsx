@@ -7,16 +7,26 @@ import { useState } from "react";
 import ModalVideo from "../ModalVideo/ModalVideo";
 
 import { GoPlay } from "react-icons/go";
+import { RiSoundModuleFill } from "react-icons/ri";
 import { VIDEOS } from "../../data/videos";
 import { slider } from "../../data/cards";
 
 const SliderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCheck, setIsCheck] = useState(false);
+  const [sound, setSound] = useState(false);
+
   const [currentVideoIndex, setCurrentVideoIndex] = useState(-1);
 
   const handleVideoButtonClick = (videoIndex) => {
     setCurrentVideoIndex(videoIndex);
     setIsOpen(true);
+    setIsCheck(false);
+  };
+
+  const onCheckSoundBtn = () => {
+    setIsCheck(true);
+    setSound(true);
   };
 
   const getCurrentVideoPlayer = () => {
@@ -25,20 +35,34 @@ const SliderMobile = () => {
     }
     const videoUrl = VIDEOS[currentVideoIndex];
     return (
-      <video
-        controls
-        autoPlay
-        className={s.modalVideo}
-        src={videoUrl}
-        type="video/mp4"
-        muted
-        loop="true"
-      ></video>
+      <>
+        {!sound ? (
+          <video
+            controls
+            autoPlay
+            className={s.modalVideo}
+            src={videoUrl}
+            type="video/mp4"
+            muted
+            loop="true"
+          ></video>
+        ) : (
+          <video
+            controls
+            autoPlay
+            className={s.modalVideo}
+            src={videoUrl}
+            type="video/mp4"
+            loop="true"
+          ></video>
+        )}
+      </>
     );
   };
 
   const handleClose = () => {
     setIsOpen(false);
+    setIsCheck(false);
   };
 
   return (
@@ -47,6 +71,38 @@ const SliderMobile = () => {
         {isOpen && (
           <ModalVideo onClose={handleClose}>
             {getCurrentVideoPlayer()}
+          </ModalVideo>
+        )}
+        {isCheck && (
+          <ModalVideo onClose={handleClose}>
+            <div className={s.checkWrapper}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "20px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "25px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Check your volume
+                </p>
+                <button
+                  className={s.checkBtn}
+                  onClick={() => handleVideoButtonClick(currentVideoIndex)}
+                >
+                  <RiSoundModuleFill className={s.checkIcon} />
+                  OK
+                </button>
+              </div>
+            </div>
           </ModalVideo>
         )}
         <Swiper
@@ -294,6 +350,25 @@ const SliderMobile = () => {
             </div>
             <div className={s.cardDesc} style={{ background: "#ABABD1" }}>
               <p className={s.sliderText}>Map USA</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={s.cardImageWrapper}>
+              {VIDEOS.map((videoUrl, index) => (
+                <GoPlay
+                  className={s.iconPlay}
+                  style={{ fill: "#E8DCCC" }}
+                  key={index}
+                  onClick={() => {
+                    onCheckSoundBtn();
+                    setCurrentVideoIndex(15);
+                  }}
+                />
+              ))}
+              <img src={slider[15]} alt="card" />
+            </div>
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.sliderText}>Sound Animation</p>
             </div>
           </SwiperSlide>
         </Swiper>
