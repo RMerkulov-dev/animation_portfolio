@@ -56,6 +56,7 @@ const PortfolioDesctop = () => {
 
   const handleClose = () => {
     setIsOpen(false);
+    setIsCheck(false);
   };
 
   return (
