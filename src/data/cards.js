@@ -16,6 +16,7 @@ import Fr from "../assets/portfolio/fr.jpg";
 import Map from "../assets/portfolio/map.jpg";
 import Arpanet from "../assets/portfolio/arpanet.jpg";
 import Office from "../assets/portfolio/office.jpg";
+import SDesign from "../assets/portfolio/s_design_mob.jpg";
 
 export const slider = [
   Studio,
@@ -33,6 +34,7 @@ export const slider = [
   Map,
   Arpanet,
   Office,
+  SDesign,
 ];
 
 export const sliderTablet = [
