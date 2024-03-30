@@ -257,7 +257,7 @@ const PortfolioDesctop = () => {
             ))}
             <img src={sliderTablet[6]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#E8DCCC' }}>
-              <p className={s.cardText}>Indastry Corporation</p>
+              <p className={s.cardText}>Industry Corporation</p>
             </div>
           </li>
 
