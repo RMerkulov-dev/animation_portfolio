@@ -445,6 +445,36 @@ const PortfolioDesctop = () => {
               <p className={s.cardText}>Sound Animation</p>
             </div>
           </li>
+          <li className={s.item17}>
+            {VIDEOS.map((videoUrl, index) => (
+              <GoPlay
+                className={s.iconPlay}
+                style={{ fill: "#E8DCCC" }}
+                key={index}
+                onClick={() => {
+                  onCheckSoundBtn();
+                  setCurrentVideoIndex(16);
+                }}
+              />
+            ))}
+            <div className={s.singleVideoBox}>
+              <video
+                className={s.singleVideo}
+                src={VIDEOS[16]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            {/*<img src={sliderTablet[13]} alt="card" />*/}
+            <div className={s.cardDesc} style={{ background: "#E8DCCC" }}>
+              <p className={s.cardText}>F-16</p>
+            </div>
+          </li>
         </ul>
       </div>
     </>
