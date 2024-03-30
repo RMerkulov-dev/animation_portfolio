@@ -14,6 +14,7 @@ import MapVideo from "../assets/video/map.mp4";
 import Arpanet from "../assets/video/arpanet.mp4";
 import Office from "../assets/video/office.mp4";
 import SDesign from "../assets/video/s_design.mp4";
+import F16Video from "../assets/video/f16.mp4";
 
 export const VIDEOS = [
   StudioVideo,
@@ -32,4 +33,5 @@ export const VIDEOS = [
   Arpanet,
   Office,
   SDesign,
+  F16Video
 ];
