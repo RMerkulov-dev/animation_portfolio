@@ -1,15 +1,15 @@
-import s from "./HomePage.module.scss";
-import Container from "../../components/Container/Container";
+import s from './HomePage.module.scss';
+import Container from '../../components/Container/Container';
 
-import { ReactComponent as PlayIcon } from "../../assets/icons/play.svg";
-import HeroMobileNew from "../../assets/hero/hero_mob.mp4";
-import HeroDesktop from "../../assets/hero/hero_pc.mp4";
-import Contacts from "../../components/Contacts/Contacts";
-import ModalVideo from "../../components/ModalVideo/ModalVideo";
-import { useEffect, useState } from "react";
-import HeaderLayout from "../../components/Layout/HeaderLayout";
-import PortfolioLayout from "../../components/Layout/PortfolioLayout";
-import Helmet from "../../components/Helmet/Helmet";
+import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
+import HeroMobileNew from '../../assets/hero/hero_mob.mp4';
+import HeroDesktop from '../../assets/hero/hero_pc.mp4';
+import Contacts from '../../components/Contacts/Contacts';
+import ModalVideo from '../../components/ModalVideo/ModalVideo';
+import { useEffect, useState } from 'react';
+import HeaderLayout from '../../components/Layout/HeaderLayout';
+import PortfolioLayout from '../../components/Layout/PortfolioLayout';
+import Helmet from '../../components/Helmet/Helmet';
 // import Header from "../../components/Header/Header";
 // import PortfolioDescktop from "../../components/PortfolioDescktop/PortfolioDescktop";
 // import SliderMobile from "../../components/SliderMobile/SliderMobile";
@@ -23,8 +23,8 @@ const HomePage = () => {
     function handleResize() {
       setIsMobile(window.innerWidth <= 767);
     }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -64,32 +64,37 @@ const HomePage = () => {
             <h2 className={s.sectionTitle}>About This Gig</h2>
             <ul className={s.aboutDescText}>
               <li>
-                Do you have your own unique logo? Would you like to make it work
-                in a new way? Brand mark animation is the latest word in video
-                marketing. I know exactly how to make your logo animation
-                recognizable.
+                With 2 years of experience in video marketing, I specialize in
+                brand mark animation. I know exactly how to make your logo
+                animation recognizable and impactful. This animation can be
+                effectively used across various platforms like Instagram,
+                Facebook, and YouTube to enhance your brand identity and engage
+                your audience.
+              </li>
+              <li className={s.work_title}>How to Start?</li>
+              <li>
+                1. Understanding the Work.
+                <br /> I will begin by asking a few questions to better
+                understand the specifics of the project. This mutual
+                communication is crucial for achieving success and ensuring that
+                the animation reflects your brand’s identity accurately.
               </li>
               <li>
-                You can use it for Instagram and Facebook videos and on your
-                YouTube channel to highlight your brand identity. All I need is
-                a logo in .ai format vectors files. If you don't have one,
-                that's not a problem. I can additionally convert it from .jpg or
-                .png. I also need to hear the wishes and expectations of the
-                result. So, I will ask a few questions to understand the work's
-                specifics better. Mutual communication is the way to success!
+                2. Placing the Order.
+                <br /> Select the appropriate package and contact me. We'll have
+                a brief preview and discuss the essential details before I start
+                working on the animation. Once the project is near completion,
+                I'll send you the video in both .mov and .mp4 formats for your
+                review and approval.
               </li>
               <li>
-                It is easy to order: choose the right package and contact me.
-                After a short preview and discussion of essential details, I
-                will proceed to work. In the end, I will send you the finished
-                video in .mov and .mp4 format for confirmation. You can make
-                edits or accept this version.
-              </li>
-              <li>
-                You will receive the animation and all the source files in one
-                package when the work is done. So, do not waste your time and
-                contact me for an animated logo and increase brand awareness,
-                stand out from the crowd, and extend your audience!
+                3. Revisions and Final Delivery.
+                <br /> You have the opportunity to request edits to the initial
+                version or accept it as it is. Upon final approval, you will
+                receive the completed animation along with all the source files.
+                This comprehensive package ensures that you have everything you
+                need to enhance your brand’s visibility, differentiate yourself
+                from competitors, and expand your audience.
               </li>
             </ul>
           </div>
