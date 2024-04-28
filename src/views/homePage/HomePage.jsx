@@ -34,21 +34,21 @@ const HomePage = () => {
       )}
       <HeaderLayout />
       <section id="hero" className={s.heroSection}>
-        {/*<Container>*/}
-        <div className={s.heroContent}>
-          <video
-            src={isMobile ? HeroMobileNew : HeroDesktop}
-            autoPlay
-            playsInline
-            width="100%"
-            type="video/mp4"
-            muted
-            loop="true"
-            preload="auto"
-            // height="200px"
-          ></video>
-        </div>
-        {/*</Container>*/}
+        <Container>
+          <div className={s.heroContent}>
+            <video
+              src={isMobile ? HeroMobileNew : HeroDesktop}
+              autoPlay
+              playsInline
+              width="100%"
+              type="video/mp4"
+              muted
+              loop="true"
+              preload="auto"
+              // height="200px"
+            ></video>
+          </div>
+        </Container>
       </section>
       <section id="portfolio" className={s.portfolioSection}>
         <Container>
