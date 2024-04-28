@@ -100,18 +100,13 @@ const PortfolioDesctop = () => {
           </ModalVideo>
         )}
         <ul className={s.portfolioList}>
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => {
-                  onCheckSoundBtn();
-                  setCurrentVideoIndex(16);
-                }}
-              />
-            ))}
+          <li
+            className={s.item}
+            onClick={() => {
+              onCheckSoundBtn();
+              setCurrentVideoIndex(16);
+            }}
+          >
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -131,15 +126,7 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E1A9C4' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(14)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(14)}>
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -159,15 +146,28 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(13)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(10)}>
+            {/*<img src={sliderTablet[11]} alt="card" />*/}
+
+            <div className={s.cardVideoBox}>
+              <video
+                className={s.cardVideo}
+                src={VIDEOS[10]}
+                autoPlay
+                playsInline
+                width="100%"
+                type="video/mp4"
+                muted
+                loop="true"
+                preload="auto"
+              ></video>
+            </div>
+            <div className={s.cardDesc} style={{ background: '#FFFFFF' }}>
+              <p className={s.cardText}>Burger Club</p>
+            </div>
+          </li>
+
+          <li className={s.item} onClick={() => handleVideoButtonClick(13)}>
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -187,46 +187,13 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
-            {/*<img src={sliderTablet[11]} alt="card" />*/}
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#FFFFFF' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(10)}
-              />
-            ))}
-            <div className={s.cardVideoBox}>
-              <video
-                className={s.cardVideo}
-                src={VIDEOS[10]}
-                autoPlay
-                playsInline
-                width="100%"
-                type="video/mp4"
-                muted
-                loop="true"
-                preload="auto"
-              ></video>
-            </div>
-            <div className={s.cardDesc} style={{ background: '#FFFFFF' }}>
-              <p className={s.cardText}>Burger Club</p>
-            </div>
-          </li>
-
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => {
-                  onCheckSoundBtn();
-                  setCurrentVideoIndex(15);
-                }}
-              />
-            ))}
+          <li
+            className={s.item}
+            onClick={() => {
+              onCheckSoundBtn();
+              setCurrentVideoIndex(15);
+            }}
+          >
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -246,30 +213,14 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(9)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(9)}>
             <img src={sliderTablet[6]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#E8DCCC' }}>
               <p className={s.cardText}>Industry Corporation</p>
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E1A9C4' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(5)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(5)}>
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -289,16 +240,9 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
+          <li className={s.item} onClick={() => handleVideoButtonClick(6)}>
             {/*<img src={sliderTablet[7]} alt="card" />*/}
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(6)}
-              />
-            ))}
+
             <div className={s.cardVideoBox}>
               <video
                 className={s.cardVideo}
@@ -317,33 +261,20 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#ABABD1' }}
-                key={index}
-                onClick={() => {
-                  handleVideoButtonClick(4);
-                  setSound(false);
-                }}
-              />
-            ))}
+          <li
+            className={s.item}
+            onClick={() => {
+              handleVideoButtonClick(4);
+              setSound(false);
+            }}
+          >
             <img src={sliderTablet[3]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#ABABD1' }}>
               <p className={s.cardText}>Business</p>
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8B099' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(0)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(0)}>
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -363,7 +294,7 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
+          <li className={s.item} onClick={() => handleVideoButtonClick(3)}>
             {/*<img src={sliderTablet[4]} alt="card" />*/}
 
             <div className={s.cardVideoBox}>
@@ -385,63 +316,34 @@ const PortfolioDesctop = () => {
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => {
-                  handleVideoButtonClick(2);
-                  setSound(false);
-                }}
-              />
-            ))}
+          <li
+            className={s.item}
+            onClick={() => {
+              handleVideoButtonClick(2);
+              setSound(false);
+            }}
+          >
             <img src={sliderTablet[2]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#E8DCCC' }}>
               <p className={s.cardText}>Michael Kean</p>
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8B099' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(7)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(7)}>
             <img src={sliderTablet[8]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#E8B099' }}>
               <p className={s.cardText}>Energy Green</p>
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E1A9C4' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(1)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(1)}>
             <img src={sliderTablet[1]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#E1A9C4' }}>
               <p className={s.cardText}>Matrix Company</p>
             </div>
           </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E8DCCC' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(12)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(12)}>
             <div className={s.singleVideoBox}>
               <video
                 className={s.singleVideo}
@@ -460,30 +362,8 @@ const PortfolioDesctop = () => {
               <p className={s.cardText}>Map USA</p>
             </div>
           </li>
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#E1A9C4' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(8)}
-              />
-            ))}
-            <img src={sliderTablet[9]} alt="card" />
-            <div className={s.cardDesc} style={{ background: '#E1A9C4' }}>
-              <p className={s.cardText}>Zoskin Beauty</p>
-            </div>
-          </li>
 
-          <li className={s.item}>
-            {VIDEOS.map((videoUrl, index) => (
-              <GoPlay
-                className={s.iconPlay}
-                style={{ fill: '#ABABD1' }}
-                key={index}
-                onClick={() => handleVideoButtonClick(11)}
-              />
-            ))}
+          <li className={s.item} onClick={() => handleVideoButtonClick(11)}>
             <img src={sliderTablet[12]} alt="card" />
             <div className={s.cardDesc} style={{ background: '#ABABD1' }}>
               <p className={s.cardText}>FR Project</p>
