@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SliderMobile from '../SliderMobile/SliderMobile';
 import PortfolioDescktop from '../PortfolioDescktop/PortfolioDescktop';
 
 const PortfolioLayout = () => {
@@ -16,7 +17,11 @@ const PortfolioLayout = () => {
   }, []);
   return (
     <>
-      <PortfolioDescktop />
+      {isMobile ? (
+        <SliderMobile openModal={openModal} setOpenModal={setOpenModal} />
+      ) : (
+        <PortfolioDescktop />
+      )}
     </>
   );
 };
