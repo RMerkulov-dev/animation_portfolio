@@ -3,13 +3,16 @@ import s from './SliderMobile.module.scss';
 import 'swiper/css'; // Basic Swiper styles
 import 'swiper/css/effect-cards'; // Effect module
 import { Swiper, SwiperSlide } from 'swiper/react'; // Swiper components
-import { EffectCards } from 'swiper'; // Swiper module
+import { EffectCards } from 'swiper/modules';
 
 import ModalVideo from '../ModalVideo/ModalVideo';
 import { GoPlay } from 'react-icons/go';
 import { RiSoundModuleFill } from 'react-icons/ri';
 import { VIDEOS } from '../../data/videos';
-import { slider } from '../../data/cards'; // Make sure this import is correct and used if needed
+import { slider } from '../../data/cards';
+
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 const SliderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,20 +83,21 @@ const SliderMobile = () => {
           className={s.mySwiper}
         >
           {VIDEOS.map((video, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={index}
+              onClick={() => {
+                getCurrentVideoPlayer();
+                setCurrentVideoIndex(index);
+                setIsOpen(true);
+              }}
+            >
               <div className={s.cardImageWrapper}>
-                <GoPlay
-                  className={s.iconPlay}
-                  onClick={() => {
-                    onCheckSoundBtn();
-                    setCurrentVideoIndex(index);
-                  }}
-                />
                 {/* Ensure 'slider' array is correctly used if needed */}
-                <img src={slider[16]} alt="card" />
+                <img src={video.image} alt="card" />
+                <div></div>
               </div>
-              <div className={s.cardDesc} style={{ background: '#E8DCCC' }}>
-                <p className={s.sliderText}>F-16</p>
+              <div className={s.cardDesc} style={{ background: video.color }}>
+                <p className={s.sliderText}>{video.title}</p>
               </div>
             </SwiperSlide>
           ))}
